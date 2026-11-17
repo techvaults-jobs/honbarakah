@@ -44,7 +44,7 @@ async function NewsArticle({ params }: { params: PageProps<"/news/[slug]">["para
       <article>
         <header className="bg-forest-950 pt-36 pb-16 text-white sm:pt-44">
           <div className="container-x max-w-4xl">
-            <Link href="/news" className="inline-flex items-center gap-2 text-sm font-semibold text-white/60 hover:text-gold-300">
+            <Link href="/news" className="-my-2 inline-flex items-center gap-2 py-2 text-sm font-semibold text-white/60 hover:text-gold-300">
               <ArrowLeft className="size-4" />
               All news
             </Link>
@@ -89,7 +89,7 @@ async function NewsArticle({ params }: { params: PageProps<"/news/[slug]">["para
       <section className="border-t border-border bg-white py-20">
         <div className="container-x">
           <h2 className="text-3xl text-forest-950">More from the campaign</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="rail-sm mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {more.map((n) => (
               <NewsCard key={n.slug} item={n} />
             ))}

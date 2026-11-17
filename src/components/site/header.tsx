@@ -42,9 +42,9 @@ export function Header() {
             </span>
           </p>
           <div className="hidden items-center gap-5 md:flex">
-            <span>{site.role}</span>
-            <span className="h-3 w-px bg-forest-950/30" />
-            <a href={`mailto:${site.contact.email}`} className="flex items-center gap-1.5 normal-case tracking-normal hover:underline">
+            <span className="hidden lg:inline">{site.role}</span>
+            <span className="hidden h-3 w-px bg-forest-950/30 lg:block" />
+            <a href={`mailto:${site.contact.email}`} className="flex items-center gap-1.5 py-2 normal-case tracking-normal hover:underline">
               <Mail className="size-4" />
               {site.contact.email}
             </a>

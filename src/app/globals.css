@@ -117,6 +117,9 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: clip;
+    -webkit-tap-highlight-color: transparent;
+    text-size-adjust: 100%;
   }
   button:not(:disabled), [role="button"]:not(:disabled) {
     cursor: pointer;
@@ -136,6 +139,54 @@
   }
   ::selection {
     @apply bg-gold-300 text-forest-950;
+  }
+}
+
+/* Scroll reveal: visible by default, animated only when JS is running. */
+.js .reveal {
+  opacity: 0;
+  transform: translate3d(0, var(--reveal-y, 24px), 0);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0s),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0s);
+}
+.js .reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Phones: turn a grid into a swipeable row with the next card peeking in. */
+@media (max-width: 639px) {
+  .rail-sm {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0.875rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    margin-inline: -1.25rem;
+    padding-inline: 1.25rem;
+    padding-bottom: 0.75rem;
+    scroll-padding-inline: 1.25rem;
+    scrollbar-width: none;
+  }
+  .rail-sm::-webkit-scrollbar {
+    display: none;
+  }
+  .rail-sm > * {
+    flex: 0 0 82%;
+    scroll-snap-align: start;
+  }
+  .rail-sm.rail-narrow > * {
+    flex-basis: 64%;
   }
 }
 

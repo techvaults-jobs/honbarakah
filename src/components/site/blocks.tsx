@@ -30,7 +30,7 @@ export function PageHero({
       <Image src={image} alt="" fill priority sizes="100vw" className="-z-20 object-cover opacity-20 lg:hidden" />
       <div className="container-x">
         <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-1.5 font-display text-sm font-semibold tracking-[0.14em] text-white/60 uppercase">
-          <Link href="/" className="hover:text-gold-300">
+          <Link href="/" className="-my-2 py-2 hover:text-gold-300">
             Home
           </Link>
           <ChevronRight className="size-3.5" />

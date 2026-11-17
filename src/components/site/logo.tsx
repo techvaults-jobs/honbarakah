@@ -13,7 +13,7 @@ export function Logo({ className, light = false }: { className?: string; light?:
       <span className="leading-none">
         <span
           className={cn(
-            "block font-display text-[1.4rem] leading-[0.9] font-bold tracking-tight uppercase",
+            "block font-display text-[1.15rem] leading-[0.95] font-bold tracking-tight whitespace-nowrap uppercase min-[400px]:text-[1.3rem] sm:text-[1.4rem]",
             light ? "text-white" : "text-forest-950"
           )}
         >
@@ -21,7 +21,7 @@ export function Logo({ className, light = false }: { className?: string; light?:
         </span>
         <span
           className={cn(
-            "mt-1 block font-display text-[0.7rem] font-semibold tracking-[0.24em] uppercase",
+            "mt-1 block font-display text-xs font-semibold tracking-[0.12em] whitespace-nowrap uppercase min-[400px]:tracking-[0.16em] sm:tracking-[0.22em]",
             light ? "text-white/60" : "text-forest-950/55"
           )}
         >

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next"
 import { Barlow, Barlow_Condensed, Mrs_Saint_Delafield } from "next/font/google"
 import { Header } from "@/components/site/header"
 import { Footer } from "@/components/site/footer"
+import { MobileActionBar } from "@/components/site/mobile-action-bar"
 import { Toaster } from "@/components/ui/sonner"
 import { site } from "@/lib/site"
 import "./globals.css"
@@ -88,8 +89,9 @@ const jsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-NG" data-scroll-behavior="smooth" className={`${display.variable} ${body.variable} ${signature.variable} antialiased`}>
+    <html lang="en-NG" data-scroll-behavior="smooth" suppressHydrationWarning className={`${display.variable} ${body.variable} ${signature.variable} antialiased`}>
       <body className="flex min-h-svh flex-col bg-cream">
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         <a
           href="#main"
           className="sr-only z-[100] rounded-full bg-forest-800 px-5 py-3 text-white focus:not-sr-only focus:fixed focus:top-4 focus:left-4"
@@ -102,6 +104,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <Footer />
+        <MobileActionBar />
         <Toaster position="top-center" theme="light" richColors />
       </body>
     </html>

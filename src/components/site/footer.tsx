@@ -43,10 +43,10 @@ export function Footer() {
 
           <div>
             <h3 className="text-xl tracking-wide text-gold-400">Explore</h3>
-            <ul className="mt-5 space-y-3 text-sm text-white/70">
+            <ul className="mt-4 space-y-1 text-[0.95rem] text-white/70">
               {nav.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="hover:text-white">
+                  <Link href={item.href} className="inline-block py-1.5 hover:text-white">
                     {item.label}
                   </Link>
                 </li>
@@ -56,10 +56,10 @@ export function Footer() {
 
           <div>
             <h3 className="text-xl tracking-wide text-gold-400">Get involved</h3>
-            <ul className="mt-5 space-y-3 text-sm text-white/70">
+            <ul className="mt-4 space-y-1 text-[0.95rem] text-white/70">
               {involve.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="hover:text-white">
+                  <Link href={item.href} className="inline-block py-1.5 hover:text-white">
                     {item.label}
                   </Link>
                 </li>
@@ -76,7 +76,7 @@ export function Footer() {
               </li>
               <li className="flex gap-3">
                 <Mail className="mt-0.5 size-4 shrink-0 text-gold-400" />
-                <a href={`mailto:${site.contact.email}`} className="hover:text-white">
+                <a href={`mailto:${site.contact.email}`} className="inline-block py-1 break-all hover:text-white">
                   {site.contact.email}
                 </a>
               </li>
@@ -92,7 +92,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 border-t border-white/10 py-6 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-3 border-t border-white/10 pt-6 pb-24 text-sm text-white/50 sm:flex-row sm:items-center sm:justify-between sm:pb-6 sm:text-xs">
           <p>
             &copy; <Year /> B.O.B 2027 Campaign Organisation. All rights reserved.
           </p>

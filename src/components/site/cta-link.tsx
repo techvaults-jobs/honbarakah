@@ -14,7 +14,7 @@ export type CtaVariant = keyof typeof variants
 
 export function ctaClass(variant: CtaVariant = "gold", size: "md" | "lg" = "lg", className?: string) {
   return cn(
-    "group/cta inline-flex items-center justify-center gap-3 rounded-[4px] font-display font-bold tracking-wide uppercase transition-all duration-200 active:translate-y-px",
+    "group/cta inline-flex items-center justify-center gap-3 rounded-[4px] whitespace-nowrap font-display font-bold tracking-wide uppercase transition-all duration-200 active:translate-y-px",
     size === "lg" ? "h-14 px-7 text-lg" : "h-11 px-5 text-base",
     variants[variant],
     className

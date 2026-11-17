@@ -23,20 +23,20 @@ export default function HomePage() {
       {/* ───────── Hero ───────── */}
       <section className="relative isolate overflow-hidden bg-forest-700 text-white">
         <div className="bg-shards absolute inset-0 -z-10" />
-        <div className="absolute inset-x-0 top-0 -z-10 h-[64svh] lg:inset-x-auto lg:inset-y-0 lg:right-0 lg:h-auto lg:w-[44%]">
+        <div className="absolute inset-x-0 top-0 -z-10 h-[64svh] md:inset-x-auto md:inset-y-0 md:right-0 md:h-auto md:w-[42%] lg:w-[44%]">
           <Image
             src="/images/portrait-green.jpg"
             alt="Hon. (Barr.) Barakat Odunuga-Bakare"
             fill
             priority
-            sizes="(min-width: 1024px) 44vw, 100vw"
+            sizes="(min-width: 768px) 44vw, 100vw"
             className="object-cover object-[center_15%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-forest-700 via-forest-700/20 to-transparent lg:bg-gradient-to-r lg:from-forest-700 lg:via-transparent lg:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-forest-700 via-forest-700/20 to-transparent md:bg-gradient-to-r md:from-forest-700 md:via-transparent md:to-transparent" />
         </div>
 
-        <div className="container-x relative flex min-h-[100svh] flex-col justify-end pt-[52svh] pb-14 lg:justify-center lg:pt-44 lg:pb-36">
-          <div className="max-w-3xl lg:max-w-[52%]">
+        <div className="container-x relative flex min-h-[100svh] flex-col justify-end pt-[52svh] pb-14 md:min-h-[56rem] md:justify-center md:pt-44 md:pb-40 lg:min-h-[100svh] lg:pb-36">
+          <div className="max-w-3xl md:max-w-[58%] lg:max-w-[52%]">
             <Reveal>
               <div className="flex flex-wrap items-center gap-3">
                 <span className="rounded-[3px] bg-apc-red px-2.5 py-1 font-display text-sm font-bold tracking-[0.14em] text-white">APC</span>
@@ -57,7 +57,7 @@ export default function HomePage() {
                 Lawyer, two-term councillor and former Special Adviser on Housing to the Lagos State Governor. She has served Surulere from the ward to the cabinet. Now she is ready to be its voice in the Assembly.
               </p>
             </Reveal>
-            <Reveal delay={0.24} className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <Reveal delay={0.24} className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <CtaLink href="/get-involved">Join the Movement</CtaLink>
               <CtaLink href="/about" variant="white" icon="arrow">
                 Meet Barakat
@@ -67,9 +67,9 @@ export default function HomePage() {
         </div>
 
         {/* Stat rail */}
-        <div className="relative lg:absolute lg:inset-x-0 lg:bottom-0">
+        <div className="relative md:absolute md:inset-x-0 md:bottom-0">
           <div className="container-x">
-            <Reveal delay={0.3} className="grid grid-cols-2 overflow-hidden rounded-t-md bg-white text-forest-950 shadow-2xl sm:grid-cols-4 lg:max-w-[62%]">
+            <Reveal delay={0.3} className="grid grid-cols-2 overflow-hidden rounded-t-md bg-white text-forest-950 shadow-2xl sm:grid-cols-4 md:max-w-[72%] lg:max-w-[62%]">
               {[
                 ["27+", "Bye-laws passed"],
                 ["2x", "Elected councillor"],
@@ -86,7 +86,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="relative z-10 -my-3">
+      <div className="relative z-10 -my-3 overflow-x-clip py-3">
         <CredentialMarquee />
       </div>
 
@@ -118,7 +118,7 @@ export default function HomePage() {
               </Reveal>
               <Reveal delay={0.15} className="mt-8 flex flex-wrap items-center justify-between gap-6 border-t border-forest-950/10 pt-8">
                 <div>
-                  <p className="font-signature text-5xl leading-none text-forest-700">Barakat Odunuga-Bakare</p>
+                  <p className="font-signature text-[2.4rem] leading-none text-forest-700 sm:text-5xl">Barakat Odunuga-Bakare</p>
                   <p className="mt-2 font-display text-sm font-bold tracking-[0.14em] text-forest-950/50 uppercase">Hon. (Barr.) Barakat Odunuga-Bakare</p>
                 </div>
                 <CtaLink href="/about" variant="green" size="md" icon="arrow">
@@ -200,7 +200,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="rail-sm mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {communityRecord.slice(0, 6).map((r, i) => (
               <Reveal key={r.title} delay={(i % 3) * 0.06} className="group flex gap-5 rounded-md border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-gold-400/50 hover:bg-white/[0.06]">
                 <span className="grid size-12 shrink-0 place-items-center rounded-[4px] bg-gold-400 text-forest-950 transition-transform group-hover:-rotate-6">
@@ -234,7 +234,7 @@ export default function HomePage() {
             }
             intro="Nine years of public service, every step taken with Surulere."
           />
-          <ol className="relative mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <ol className="rail-sm relative mt-12 grid gap-5 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4">
             {milestones.map((m, i) => (
               <Reveal as="li" key={m.year} delay={i * 0.08} className="group relative overflow-hidden rounded-md bg-white p-7 ring-1 ring-forest-950/8 transition-all hover:-translate-y-1 hover:shadow-xl">
                 <span className="text-outline pointer-events-none absolute -top-3 -right-2 font-display text-8xl font-bold text-forest-950/10 transition-colors group-hover:text-gold-400/50">
@@ -248,7 +248,7 @@ export default function HomePage() {
             ))}
           </ol>
           <Reveal className="mt-12 text-center">
-            <Link href="/about#journey" className="group inline-flex items-center gap-2 font-display text-lg font-bold tracking-wide text-forest-700 uppercase hover:text-forest-600">
+            <Link href="/about#journey" className="group inline-flex items-center gap-2 py-2 font-display text-lg font-bold tracking-wide text-forest-700 uppercase hover:text-forest-600">
               See the full timeline
               <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
             </Link>
@@ -356,7 +356,7 @@ export default function HomePage() {
             }
             intro="Posters, flyers and messages already circulating across the constituency."
           />
-          <div className="mt-16 flex flex-wrap items-center justify-center gap-6 lg:flex-nowrap">
+          <div className="rail-sm rail-narrow mt-12 flex items-center gap-6 py-4 sm:mt-16 sm:flex-wrap sm:justify-center lg:flex-nowrap">
             {posters.map((p, i) => (
               <Reveal
                 key={p.src}
@@ -384,7 +384,7 @@ export default function HomePage() {
               </CtaLink>
             </Reveal>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="rail-sm mt-10 grid gap-6 sm:mt-12 md:grid-cols-2 lg:grid-cols-3">
             {latest.map((n, i) => (
               <Reveal key={n.slug} delay={i * 0.08}>
                 <NewsCard item={n} />
