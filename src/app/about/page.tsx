@@ -75,7 +75,7 @@ export default function AboutPage() {
             <p>
               At the University of Bedfordshire she earned a Bachelor of Laws, then stayed on for a Master&apos;s in International Commercial Law. She came home to complete the Nigerian Law School and was called to the Nigerian Bar.
             </p>
-            <blockquote className="my-10 border-l-4 border-gold-500 bg-gold-100/60 py-6 pr-6 pl-7 font-display text-3xl leading-[1] font-extrabold uppercase text-forest-900">
+            <blockquote className="my-10 border-l-4 border-gold-500 bg-gold-100/60 py-6 pr-6 pl-7 font-display text-3xl leading-[1] font-bold uppercase text-forest-900">
               Leadership is not defined by titles alone. It is defined by service, commitment and visible impact on people&apos;s lives.
             </blockquote>
             <p>
@@ -120,7 +120,7 @@ export default function AboutPage() {
                     {i === 0 ? <Crown className="size-3.5 text-forest-950" /> : m.year === "Education" ? <GraduationCap className="size-3.5 text-forest-950" /> : null}
                   </span>
                   <div className={i % 2 ? "sm:order-2" : "sm:text-right"}>
-                    <p className="font-display text-4xl font-black text-gold-300">{m.year}</p>
+                    <p className="font-display text-4xl font-bold text-gold-300">{m.year}</p>
                   </div>
                   <div className={i % 2 ? "sm:text-right" : ""}>
                     <h3 className="text-[1.75rem]">{m.title}</h3>
@@ -137,7 +137,7 @@ export default function AboutPage() {
         <div className="grid gap-14 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
           <div>
             <Eyebrow>Education</Eyebrow>
-            <h2 className="mt-4 text-5xl text-forest-950 sm:text-6xl">
+            <h2 className="mt-4 text-4xl text-forest-950 sm:text-5xl">
               Trained in two legal traditions.
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">

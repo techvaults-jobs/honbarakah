@@ -44,7 +44,7 @@ export function AgendaExplorer({ pillars }: { pillars: PillarData[] }) {
               <span className={cn("block font-display text-sm font-bold tracking-[0.16em]", active === i ? "text-gold-300" : "text-forest-600")}>
                 PRIORITY 0{i + 1}
               </span>
-              <span className="block font-display text-2xl leading-none font-extrabold uppercase">{item.title}</span>
+              <span className="block font-display text-2xl leading-none font-semibold">{item.title}</span>
             </span>
             <ArrowRight className={cn("size-5 shrink-0 transition-transform", active === i ? "translate-x-0 text-gold-400" : "-translate-x-1 opacity-30")} />
           </button>

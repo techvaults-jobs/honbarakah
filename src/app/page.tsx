@@ -39,17 +39,17 @@ export default function HomePage() {
           <div className="max-w-3xl lg:max-w-[52%]">
             <Reveal>
               <div className="flex flex-wrap items-center gap-3">
-                <span className="rounded-[3px] bg-apc-red px-2.5 py-1 font-display text-sm font-black tracking-[0.14em] text-white">APC</span>
+                <span className="rounded-[3px] bg-apc-red px-2.5 py-1 font-display text-sm font-bold tracking-[0.14em] text-white">APC</span>
                 <span className="font-display text-base font-bold tracking-[0.16em] text-gold-300 uppercase sm:text-lg">
                   Lagos State House of Assembly &middot; {site.constituency}
                 </span>
               </div>
             </Reveal>
             <Reveal delay={0.08}>
-              <h1 className="mt-6 font-display leading-[0.84] font-black">
-                <span className="block text-[4.2rem] sm:text-[7rem] xl:text-[8.6rem]">Barakat</span>
-                <span className="block text-[2.6rem] text-white/95 sm:text-[4.4rem] xl:text-[5.4rem]">Odunuga-Bakare</span>
-                <span className="mt-2 block text-[2.6rem] text-gold-400 sm:text-[4.4rem] xl:text-[5.4rem]">For Surulere.</span>
+              <h1 className="mt-6 font-display leading-[0.9] font-bold">
+                <span className="block text-[3.4rem] sm:text-[5.6rem] xl:text-[6.8rem]">Barakat</span>
+                <span className="block text-[2.2rem] text-white/95 sm:text-[3.6rem] xl:text-[4.4rem]">Odunuga-Bakare</span>
+                <span className="mt-2 block text-[2.2rem] text-gold-400 sm:text-[3.6rem] xl:text-[4.4rem]">For Surulere.</span>
               </h1>
             </Reveal>
             <Reveal delay={0.16}>
@@ -77,7 +77,7 @@ export default function HomePage() {
                 ["9+", "Years of service"],
               ].map(([v, l], i) => (
                 <div key={l} className={cn("border-forest-950/10 px-5 py-5 sm:px-6", i % 2 === 1 && "border-l", i > 1 && "border-t sm:border-t-0", i === 2 && "sm:border-l")}>
-                  <div className="font-display text-4xl leading-none font-black text-forest-700">{v}</div>
+                  <div className="font-display text-4xl leading-none font-bold text-forest-700">{v}</div>
                   <div className="mt-1 font-display text-sm font-bold tracking-[0.1em] text-forest-950/60 uppercase">{l}</div>
                 </div>
               ))}
@@ -97,14 +97,14 @@ export default function HomePage() {
             <Reveal className="relative min-h-[26rem] lg:min-h-[40rem]">
               <Image src="/images/portrait-smile.jpg" alt="Barakat Odunuga-Bakare smiling in a black dress and pearls" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover object-top" />
               <div className="absolute bottom-0 left-0 bg-forest-700 px-6 py-5 text-white">
-                <p className="font-display text-5xl leading-none font-black">1986</p>
+                <p className="font-display text-5xl leading-none font-bold">1986</p>
                 <p className="font-display text-sm font-bold tracking-[0.14em] text-gold-300 uppercase">Born in Surulere</p>
               </div>
             </Reveal>
             <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-16">
               <Reveal>
                 <Eyebrow>Meet Barakat</Eyebrow>
-                <h2 className="mt-6 text-5xl text-forest-950 sm:text-6xl">
+                <h2 className="mt-6 text-4xl text-forest-950 sm:text-5xl">
                   Authentic leadership. <Hi>A voice for the people.</Hi>
                 </h2>
               </Reveal>
@@ -135,7 +135,7 @@ export default function HomePage() {
         <div className="bg-shards absolute inset-0 -z-10" />
         <Quote className="absolute top-10 left-1/2 -z-10 size-48 -translate-x-1/2 text-white/5" />
         <Reveal className="container-x text-center">
-          <p className="mx-auto max-w-5xl font-display text-5xl leading-[0.95] font-black uppercase sm:text-7xl">
+          <p className="mx-auto max-w-4xl font-display text-4xl leading-[1.05] font-semibold uppercase sm:text-5xl lg:text-6xl">
             &ldquo;<span className="text-gold-400">Leadership</span> is not defined by titles alone. It is defined by{" "}
             <span className="text-gold-400">service, commitment and visible impact</span> on people&apos;s lives.&rdquo;
           </p>
@@ -192,7 +192,7 @@ export default function HomePage() {
           <div className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-md bg-white/10 lg:grid-cols-4">
             {stats.map((s, i) => (
               <Reveal key={s.label} delay={i * 0.06} className="bg-forest-950 p-6 sm:p-8">
-                <div className="font-display text-6xl leading-none font-black text-gold-400 sm:text-7xl">
+                <div className="font-display text-5xl leading-none font-bold text-gold-400 sm:text-6xl">
                   <Counter value={s.value} suffix={s.suffix} />
                 </div>
                 <p className="mt-3 max-w-[14rem] text-[0.95rem] leading-snug text-white/70">{s.label}</p>
@@ -237,11 +237,11 @@ export default function HomePage() {
           <ol className="relative mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {milestones.map((m, i) => (
               <Reveal as="li" key={m.year} delay={i * 0.08} className="group relative overflow-hidden rounded-md bg-white p-7 ring-1 ring-forest-950/8 transition-all hover:-translate-y-1 hover:shadow-xl">
-                <span className="text-outline pointer-events-none absolute -top-3 -right-2 font-display text-8xl font-black text-forest-950/10 transition-colors group-hover:text-gold-400/50">
+                <span className="text-outline pointer-events-none absolute -top-3 -right-2 font-display text-8xl font-bold text-forest-950/10 transition-colors group-hover:text-gold-400/50">
                   {m.year}
                 </span>
                 <span className="relative block h-1.5 w-12 bg-gold-400" />
-                <p className="relative mt-6 font-display text-5xl leading-none font-black text-forest-700">{m.year}</p>
+                <p className="relative mt-6 font-display text-5xl leading-none font-bold text-forest-700">{m.year}</p>
                 <h3 className="relative mt-3 text-2xl text-forest-950">{m.title}</h3>
                 <p className="relative mt-2 leading-relaxed text-forest-950/65">{m.body}</p>
               </Reveal>
@@ -264,7 +264,7 @@ export default function HomePage() {
             <span className="inline-flex rounded-[3px] border-2 border-forest-950 px-2.5 py-1 font-display text-sm font-bold tracking-[0.14em] uppercase">
               Àjùmọ̀ṣe, Àjùmọ̀jẹ
             </span>
-            <h2 className="mt-6 text-5xl sm:text-6xl lg:text-7xl">
+            <h2 className="mt-6 text-4xl sm:text-5xl lg:text-6xl">
               What we build together, <span className="text-forest-700">we share together.</span>
             </h2>
             <p className="mt-5 max-w-lg text-lg text-forest-950/75">
@@ -306,7 +306,7 @@ export default function HomePage() {
                     )}
                   >
                     <div className={cn("flex w-24 flex-col items-center rounded-[4px] py-3 text-center", upcoming ? "bg-gold-400 text-forest-950" : "bg-forest-50 text-forest-800")}>
-                      <span className="font-display text-5xl leading-none font-black">{d.day}</span>
+                      <span className="font-display text-5xl leading-none font-bold">{d.day}</span>
                       <span className="font-display text-sm font-bold tracking-[0.14em] uppercase">
                         {d.month} {d.year}
                       </span>

@@ -71,7 +71,7 @@ async function NewsArticle({ params }: { params: PageProps<"/news/[slug]">["para
         <div className="container-x max-w-3xl py-16 sm:py-20">
           <Reveal className="space-y-6 text-lg leading-[1.8] text-forest-950/85">
             {item.body.map((para, i) => (
-              <p key={i} className={i === 0 ? "text-xl font-medium text-forest-950 first-letter:float-left first-letter:mr-3 first-letter:font-display first-letter:text-7xl first-letter:leading-[0.8] first-letter:font-black first-letter:text-forest-700" : undefined}>
+              <p key={i} className={i === 0 ? "text-xl font-medium text-forest-950 first-letter:float-left first-letter:mr-3 first-letter:font-display first-letter:text-7xl first-letter:leading-[0.8] first-letter:font-bold first-letter:text-forest-700" : undefined}>
                 {para}
               </p>
             ))}
@@ -79,7 +79,7 @@ async function NewsArticle({ params }: { params: PageProps<"/news/[slug]">["para
           {item.quote && (
             <Reveal className="relative mt-12 rounded-md bg-forest-800 p-8 text-white sm:p-10">
               <Quote className="size-10 text-gold-400" />
-              <blockquote className="mt-4 font-display text-3xl leading-[1] font-extrabold uppercase sm:text-4xl">{item.quote}</blockquote>
+              <blockquote className="mt-4 font-display text-3xl leading-[1] font-bold uppercase sm:text-4xl">{item.quote}</blockquote>
               <p className="mt-6 text-sm font-semibold tracking-wider text-white/60 uppercase">Hon. (Barr.) Barakat Odunuga-Bakare</p>
             </Reveal>
           )}

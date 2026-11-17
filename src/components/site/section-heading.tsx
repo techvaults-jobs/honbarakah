@@ -35,7 +35,7 @@ export function SectionHeading({
       <Eyebrow light={light}>{eyebrow}</Eyebrow>
       <h2
         className={cn(
-          "mt-5 text-5xl text-balance sm:text-6xl lg:text-7xl",
+          "mt-5 text-4xl text-balance sm:text-5xl lg:text-6xl",
           light ? "text-white" : "text-forest-950"
         )}
       >

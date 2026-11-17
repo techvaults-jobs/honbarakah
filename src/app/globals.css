@@ -124,10 +124,15 @@
   html {
     @apply font-sans scroll-smooth;
   }
-  h1, h2, h3, h4 {
-    @apply font-heading font-extrabold uppercase;
-    letter-spacing: -0.005em;
-    line-height: 0.95;
+  h1, h2 {
+    @apply font-heading font-bold uppercase;
+    letter-spacing: 0.005em;
+    line-height: 1;
+  }
+  h3, h4 {
+    @apply font-heading font-semibold;
+    letter-spacing: 0.01em;
+    line-height: 1.1;
   }
   ::selection {
     @apply bg-gold-300 text-forest-950;

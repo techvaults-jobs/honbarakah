@@ -57,7 +57,7 @@ export default function GetInvolvedPage() {
         <div className="container-x grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div>
             <Eyebrow>Volunteer sign-up</Eyebrow>
-            <h2 className="mt-4 text-5xl text-forest-950 sm:text-6xl">
+            <h2 className="mt-4 text-4xl text-forest-950 sm:text-5xl">
               Put your name down. <span className="text-forest-600">We will do the rest.</span>
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
@@ -79,7 +79,7 @@ export default function GetInvolvedPage() {
           <ol className="mt-12 grid gap-5 md:grid-cols-3">
             {checklist.map((c, i) => (
               <Reveal as="li" key={c.title} delay={i * 0.08} className="relative rounded-md border border-white/10 bg-white/[0.04] p-8">
-                <span className="absolute top-6 right-7 font-display text-6xl font-black text-white/10">{i + 1}</span>
+                <span className="absolute top-6 right-7 font-display text-6xl font-bold text-white/10">{i + 1}</span>
                 <c.icon className="size-9 text-gold-400" />
                 <h3 className="mt-5 text-[1.75rem]">{c.title}</h3>
                 <p className="mt-2 leading-relaxed text-white/65">{c.body}</p>

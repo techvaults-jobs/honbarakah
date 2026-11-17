@@ -40,7 +40,7 @@ export default function ContactPage() {
       <section className="container-x grid gap-14 py-24 sm:py-28 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
         <div>
           <Eyebrow>Get in touch</Eyebrow>
-          <h2 className="mt-4 text-5xl text-forest-950 sm:text-6xl">Talk to the campaign.</h2>
+          <h2 className="mt-4 text-4xl text-forest-950 sm:text-5xl">Talk to the campaign.</h2>
           <ul className="mt-10 space-y-4">
             {channels.map((c) => (
               <li key={c.label} className="flex gap-4 rounded-md border border-border bg-white p-5">

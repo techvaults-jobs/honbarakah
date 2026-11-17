@@ -123,7 +123,7 @@ export function Header() {
                             <Link
                               href={item.href}
                               className={cn(
-                                "flex items-center gap-4 rounded-[4px] px-3 py-2.5 font-display text-3xl font-extrabold uppercase transition-colors",
+                                "flex items-center gap-4 rounded-[4px] px-3 py-2.5 font-display text-3xl font-bold uppercase transition-colors",
                                 isActive(item.href) ? "bg-white/10 text-gold-400" : "text-white hover:bg-white/5"
                               )}
                             >

@@ -52,9 +52,9 @@ export default function AgendaPage() {
                   <span className="grid size-16 place-items-center rounded-md bg-forest-700 text-gold-300 shadow-lg shadow-forest-900/20">
                     <p.icon className="size-8" />
                   </span>
-                  <span className="font-display text-6xl font-black text-forest-100">0{i + 1}</span>
+                  <span className="font-display text-6xl font-bold text-forest-100">0{i + 1}</span>
                 </div>
-                <h2 className="mt-8 text-5xl text-forest-950 sm:text-6xl">{p.title}</h2>
+                <h2 className="mt-8 text-4xl text-forest-950 sm:text-5xl">{p.title}</h2>
                 <p className="mt-5 text-xl leading-relaxed text-forest-800">{p.summary}</p>
               </Reveal>
               <Reveal delay={0.1}>

@@ -38,7 +38,7 @@ export function PageHero({
         </nav>
         <Reveal className="max-w-2xl">
           <Eyebrow light>{eyebrow}</Eyebrow>
-          <h1 className="mt-6 text-6xl text-balance sm:text-7xl lg:text-8xl">{title}</h1>
+          <h1 className="mt-6 text-5xl text-balance sm:text-6xl lg:text-7xl">{title}</h1>
           {intro && <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80 sm:text-xl">{intro}</p>}
         </Reveal>
       </div>
@@ -93,7 +93,7 @@ export function CredentialMarquee({ className }: { className?: string }) {
     <div className={cn("relative flex -rotate-[1.2deg] overflow-hidden bg-gold-400 py-4 shadow-xl", className)}>
       <div className="flex shrink-0 animate-marquee items-center gap-8 pr-8 motion-reduce:animate-none">
         {items.map((c, i) => (
-          <span key={i} className="flex items-center gap-8 font-display text-xl font-extrabold whitespace-nowrap text-forest-950 uppercase sm:text-2xl">
+          <span key={i} className="flex items-center gap-8 font-display text-xl font-bold whitespace-nowrap text-forest-950 uppercase sm:text-2xl">
             {c}
             <Star className="size-5 fill-forest-700 text-forest-700" aria-hidden />
           </span>

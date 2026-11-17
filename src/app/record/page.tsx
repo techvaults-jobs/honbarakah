@@ -47,7 +47,7 @@ export default function RecordPage() {
         <div className="container-x grid grid-cols-2 lg:grid-cols-4">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.08} className="border-border px-2 py-12 sm:px-8 [&:nth-child(odd)]:border-r lg:[&:not(:last-child)]:border-r">
-              <div className="font-display text-5xl font-black text-forest-700 sm:text-6xl">
+              <div className="font-display text-5xl font-bold text-forest-700 sm:text-6xl">
                 <Counter value={s.value} suffix={s.suffix} />
               </div>
               <p className="mt-3 max-w-[14rem] text-sm font-medium text-muted-foreground sm:text-base">{s.label}</p>
@@ -90,7 +90,7 @@ export default function RecordPage() {
             <span className="grid size-14 place-items-center rounded-md bg-forest-700 text-gold-300">
               <Gavel className="size-7" />
             </span>
-            <h2 className="mt-6 text-5xl text-forest-950 sm:text-6xl">A lawmaker before the title.</h2>
+            <h2 className="mt-6 text-4xl text-forest-950 sm:text-5xl">A lawmaker before the title.</h2>
             <p className="mt-5 text-lg text-muted-foreground">
               Barakat already knows how legislation is written, debated and passed. She has done it, and she has led the chamber that did it.
             </p>
@@ -131,7 +131,7 @@ export default function RecordPage() {
             <ol className="space-y-4">
               {housingRecord.map((h, i) => (
                 <Reveal as="li" key={h.title} delay={i * 0.06} className="flex gap-6 rounded-md border border-white/10 bg-white/[0.04] p-7">
-                  <span className="font-display text-3xl font-black text-gold-400">0{i + 1}</span>
+                  <span className="font-display text-3xl font-bold text-gold-400">0{i + 1}</span>
                   <div>
                     <h3 className="text-xl">{h.title}</h3>
                     <p className="mt-2 leading-relaxed text-white/65">{h.body}</p>
