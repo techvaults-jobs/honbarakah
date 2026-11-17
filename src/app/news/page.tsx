@@ -4,10 +4,11 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { PageHero, NewsCard } from "@/components/site/blocks"
 import { Reveal } from "@/components/site/reveal"
-import { formatDate, news } from "@/lib/content"
+import { formatDate, news, newsCategories } from "@/lib/content"
+import { NewsFilter } from "@/components/site/news-filter"
 
 export const metadata: Metadata = {
-  title: "News",
+  title: "News and Statements",
   description: "Campaign news, statements and press coverage of Barakat Odunuga-Bakare and the B.O.B 2027 campaign in Surulere Constituency I.",
   alternates: { canonical: "/news" },
 }
@@ -18,14 +19,14 @@ export default function NewsPage() {
   return (
     <>
       <PageHero
-        crumb="News"
+        crumb="News and Statements"
         eyebrow="Newsroom"
         title={
           <>
             News from <span className="text-gold-400">the trail.</span>
           </>
         }
-        intro="Campaign updates, statements and what the press is saying about B.O.B 2027."
+        intro="Campaign updates, official statements, speeches, interviews and what the press is saying about B.O.B 2027."
         image="/images/volunteers-jersey.jpg"
       />
 
@@ -49,12 +50,8 @@ export default function NewsPage() {
           </Link>
         </Reveal>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {rest.map((n, i) => (
-            <Reveal key={n.slug} delay={(i % 3) * 0.08}>
-              <NewsCard item={n} />
-            </Reveal>
-          ))}
+        <div className="mt-12">
+          <NewsFilter order={[...newsCategories]} items={rest.map((n) => ({ slug: n.slug, category: n.source && !n.body ? "Press" : n.category, node: <NewsCard item={n} /> }))} />
         </div>
       </section>
     </>

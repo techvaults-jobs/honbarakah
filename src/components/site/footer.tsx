@@ -1,17 +1,21 @@
 import Link from "next/link"
 import { Mail, MapPin, Phone } from "lucide-react"
-import { nav, site } from "@/lib/site"
+import { allPages, site } from "@/lib/site"
 import { Logo } from "./logo"
 import { SocialLinks } from "./social-icons"
 import { NewsletterForm } from "./newsletter-form"
 import { Year } from "./year"
 
 const involve = [
-  { href: "/get-involved#volunteer", label: "Volunteer" },
-  { href: "/get-involved#ward-team", label: "Join a ward team" },
-  { href: "/get-involved#vote", label: "Get your PVC ready" },
-  { href: "/contact", label: "Share an idea" },
+  { href: "/get-involved#volunteer", label: "Volunteer or register as a supporter" },
+  { href: "/election-2027#agents", label: "Become a polling unit agent" },
+  { href: "/constituency#desk", label: "Report a community issue" },
+  { href: "/constituency#desk", label: "Share an idea for Surulere" },
+  { href: "/support", label: "Support or partner on a project" },
+  { href: "/election-2027#vote", label: "Get your PVC ready" },
 ]
+
+const explore = allPages.filter((p) => !["/contact", "/support", "/get-involved"].includes(p.href))
 
 export function Footer() {
   return (
@@ -31,7 +35,7 @@ export function Footer() {
           <NewsletterForm />
         </div>
 
-        <div className="grid gap-12 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div className="grid gap-12 py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.2fr_1.1fr]">
           <div>
             <Logo light />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/60">
@@ -43,8 +47,8 @@ export function Footer() {
 
           <div>
             <h3 className="text-xl tracking-wide text-gold-400">Explore</h3>
-            <ul className="mt-4 space-y-1 text-[0.95rem] text-white/70">
-              {nav.map((item) => (
+            <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-1 text-[0.95rem] text-white/70 sm:grid-cols-1">
+              {explore.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="inline-block py-1.5 hover:text-white">
                     {item.label}
@@ -58,7 +62,7 @@ export function Footer() {
             <h3 className="text-xl tracking-wide text-gold-400">Get involved</h3>
             <ul className="mt-4 space-y-1 text-[0.95rem] text-white/70">
               {involve.map((item) => (
-                <li key={item.href}>
+                <li key={item.label}>
                   <Link href={item.href} className="inline-block py-1.5 hover:text-white">
                     {item.label}
                   </Link>
@@ -96,11 +100,16 @@ export function Footer() {
           <p>
             &copy; <Year /> B.O.B 2027 Campaign Organisation. All rights reserved.
           </p>
-          <p>
+          <p className="flex flex-wrap items-center gap-x-5 gap-y-1">
+            <Link href="/privacy" className="py-1 text-white/70 hover:text-gold-300">
+              Privacy policy
+            </Link>
+            <span>
             Built by{" "}
             <a href="https://techvaults.com" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-gold-300">
               Techvaults
             </a>
+            </span>
           </p>
         </div>
       </div>

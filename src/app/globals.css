@@ -188,6 +188,14 @@
   .rail-sm.rail-narrow > * {
     flex-basis: 64%;
   }
+  .rail-sm.rail-chips {
+    margin-inline: -1rem;
+    padding-inline: 1rem;
+    scroll-padding-inline: 1rem;
+  }
+  .rail-sm.rail-chips > * {
+    flex-basis: auto;
+  }
 }
 
 @layer utilities {

@@ -294,11 +294,14 @@ export const gallery: GalleryItem[] = [
   { src: "/images/portrait-poise.jpg", alt: "Barakat Odunuga-Bakare in a black dress with hands clasped", caption: "Studio portrait", category: "Portraits", w: 720, h: 1080 },
 ]
 
+export const newsCategories = ["Campaign", "Statement", "Speech", "Interview", "Press"] as const
+export type NewsCategory = (typeof newsCategories)[number]
+
 export type NewsItem = {
   slug: string
   title: string
   date?: string
-  category: "Campaign" | "Press" | "Statement"
+  category: NewsCategory
   excerpt: string
   image: string
   source?: { name: string; url: string }
@@ -414,7 +417,7 @@ export const events: CampaignEvent[] = [
     venue: "Your polling unit, Surulere Constituency I",
     body: "The day it all counts. Bring your PVC, vote early and stay to see the results announced.",
     tag: "Election Day",
-    href: "/get-involved#vote",
+    href: "/election-2027",
   },
   {
     date: "2026-08-20",

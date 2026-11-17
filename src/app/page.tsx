@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, ArrowUpRight, CalendarDays, Clock, MapPin, Quote, Vote } from "lucide-react"
+import { ArrowRight, ArrowUpRight, CalendarDays, Clock, FolderKanban, HandCoins, MapPin, MessageSquareWarning, Quote, ShieldCheck, UsersRound, Vote } from "lucide-react"
 import { Reveal } from "@/components/site/reveal"
 import { Counter } from "@/components/site/counter"
 import { Countdown } from "@/components/site/countdown"
@@ -11,6 +11,14 @@ import { AgendaExplorer } from "@/components/site/agenda-explorer"
 import { communityRecord, dateParts, events, gallery, journey, news, pillars, posters, stats } from "@/lib/content"
 import { site } from "@/lib/site"
 import { cn } from "@/lib/utils"
+
+const hub = [
+  { icon: FolderKanban, href: "/projects", title: "Projects and achievements", body: "Every project on record: where it happened, who it served and the office behind it.", cta: "Explore the ledger" },
+  { icon: MessageSquareWarning, href: "/constituency", title: "Constituency desk", body: "Report an issue, share an idea and track it with a reference number.", cta: "Open the desk" },
+  { icon: UsersRound, href: "/get-involved", title: "Volunteers and supporters", body: "Join a ward team or put your name down as a supporter.", cta: "Sign up" },
+  { icon: ShieldCheck, href: "/election-2027", title: "Election 2027 agents", body: "Register, get verified and protect the vote at your polling unit.", cta: "Become an agent" },
+  { icon: HandCoins, href: "/support", title: "Support and partnership", body: "Fund, supply or sponsor a project and see what it delivers.", cta: "Partner with us" },
+]
 
 export default function HomePage() {
   const milestones = journey.filter((m) => ["2017", "2018", "2023", "2026"].includes(m.year))
@@ -130,6 +138,61 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ───────── Platform hub ───────── */}
+      <section className="relative isolate overflow-hidden bg-white py-24 sm:py-32">
+        <div className="container-x">
+          <div className="mb-12 grid gap-8 lg:grid-cols-2 lg:items-end">
+            <SectionHeading
+              eyebrow="More than a campaign"
+              title={
+                <>
+                  One platform. <Hi>Every way in.</Hi>
+                </>
+              }
+            />
+            <Reveal delay={0.1}>
+              <p className="text-lg leading-relaxed text-forest-950/70 sm:text-xl">
+                Follow the work, raise what matters on your street, join the team on the ground or help fund what comes next. Whatever brought you here, start below.
+              </p>
+            </Reveal>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {hub.map((h, i) => (
+              <Reveal key={h.href} delay={(i % 3) * 0.06} className={cn(i === 0 && "sm:col-span-2 lg:col-span-1 lg:row-span-2")}>
+                <Link
+                  href={h.href}
+                  className={cn(
+                    "group relative isolate flex h-full flex-col overflow-hidden rounded-md p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:p-8",
+                    i === 0 ? "bg-forest-800 text-white hover:shadow-forest-900/30" : "bg-cream text-forest-950 ring-1 ring-forest-950/8 hover:bg-white hover:shadow-forest-900/10"
+                  )}
+                >
+                  {i === 0 && (
+                    <>
+                      <Image src="/images/site-walk.jpg" alt="" fill sizes="(min-width: 1024px) 33vw, 100vw" className="-z-20 object-cover opacity-30" />
+                      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-forest-950 via-forest-900/70 to-forest-800/30" />
+                    </>
+                  )}
+                  <span className={cn("font-display text-sm font-bold tracking-[0.16em]", i === 0 ? "text-gold-300" : "text-forest-600")}>0{i + 1}</span>
+                  <span
+                    className={cn(
+                      "mt-4 grid size-14 place-items-center rounded-[4px] transition-transform group-hover:-rotate-6",
+                      i === 0 ? "bg-gold-400 text-forest-950" : "bg-forest-700 text-gold-300"
+                    )}
+                  >
+                    <h.icon className="size-7" />
+                  </span>
+                  <h3 className={cn("mt-6 leading-tight", i === 0 ? "text-4xl lg:mt-auto lg:text-5xl" : "text-2xl")}>{h.title}</h3>
+                  <p className={cn("mt-2 leading-relaxed", i === 0 ? "max-w-sm text-lg text-white/75" : "text-forest-950/65")}>{h.body}</p>
+                  <span className={cn("mt-6 flex items-center gap-2 font-display text-base font-bold tracking-wide uppercase", i === 0 ? "text-gold-400" : "text-forest-700")}>
+                    {h.cta} <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ───────── Quote band ───────── */}
       <section className="relative isolate overflow-hidden bg-forest-800 py-24 text-white sm:py-32">
         <div className="bg-shards absolute inset-0 -z-10" />
@@ -214,8 +277,8 @@ export default function HomePage() {
             ))}
           </div>
           <Reveal className="mt-12 flex justify-center">
-            <CtaLink href="/record" icon="arrow">
-              The full track record
+            <CtaLink href="/projects" icon="arrow">
+              Explore every project
             </CtaLink>
           </Reveal>
         </div>
@@ -270,9 +333,14 @@ export default function HomePage() {
             <p className="mt-5 max-w-lg text-lg text-forest-950/75">
               Election day is coming. Make sure your Permanent Voter&apos;s Card is ready, know your polling unit, and bring one more person with you.
             </p>
-            <CtaLink href="/get-involved#vote" variant="green" icon={Vote} className="mt-8">
-              Voter checklist
-            </CtaLink>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <CtaLink href="/election-2027#agents" variant="green" icon={ShieldCheck}>
+                Become an agent
+              </CtaLink>
+              <CtaLink href="/election-2027#vote" variant="ghostDark" icon={Vote}>
+                Voter checklist
+              </CtaLink>
+            </div>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mb-4 font-display text-lg font-bold tracking-[0.14em] uppercase">Countdown to election day</p>
@@ -287,8 +355,8 @@ export default function HomePage() {
           <div className="mb-14 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
             <SectionHeading eyebrow="Campaign calendar" title={<>Key <Hi>moments</Hi></>} intro="Where the campaign has been, and the date that matters most." />
             <Reveal>
-              <CtaLink href="/news" variant="ghostDark" size="md" icon="arrow">
-                All updates
+              <CtaLink href="/events" variant="ghostDark" size="md" icon="arrow">
+                Full calendar
               </CtaLink>
             </Reveal>
           </div>

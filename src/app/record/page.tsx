@@ -1,14 +1,17 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-import { CheckCircle2, Gavel, Building2, Flag } from "lucide-react"
+import Link from "next/link"
+import { ArrowRight, CheckCircle2, Gavel, Building2, Flag } from "lucide-react"
 import { PageHero, CtaBand } from "@/components/site/blocks"
 import { Reveal } from "@/components/site/reveal"
 import { Counter } from "@/components/site/counter"
 import { Eyebrow, SectionHeading } from "@/components/site/section-heading"
 import { communityRecord, housingRecord, stats } from "@/lib/content"
+import { offices, projects } from "@/lib/platform"
+import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
-  title: "Track Record",
+  title: "Public-Service Record",
   description:
     "27+ bye-laws, street lighting, free JAMB forms, food relief, halted demolitions and a war on land fraud. The record of Barakat Odunuga-Bakare in Surulere and in the Lagos State cabinet.",
   alternates: { canonical: "/record" },
@@ -32,8 +35,8 @@ export default function RecordPage() {
   return (
     <>
       <PageHero
-        crumb="Track Record"
-        eyebrow="Track record"
+        crumb="Public-Service Record"
+        eyebrow="Public-service record"
         title={
           <>
             Results you can <span className="text-gold-400">walk past.</span>
@@ -53,6 +56,60 @@ export default function RecordPage() {
               <p className="mt-3 max-w-[14rem] text-sm font-medium text-muted-foreground sm:text-base">{s.label}</p>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      {/* Offices archive */}
+      <section className="bg-cream py-24 sm:py-32">
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Offices and terms"
+            title={
+              <>
+                Every office, <span className="text-forest-600">on the record.</span>
+              </>
+            }
+            intro="A running archive of the offices Barakat has held, what she did in each and the projects delivered under them. New offices are added as her public service grows."
+          />
+          <ol className="relative mt-14 space-y-5 before:absolute before:top-2 before:bottom-2 before:left-[1.1rem] before:w-0.5 before:bg-forest-950/10 sm:before:left-[1.35rem]">
+            {offices.map((o, i) => {
+              const count = projects.filter((p) => p.office === o.slug).length
+              return (
+                <Reveal as="li" key={o.slug} delay={Math.min(i, 3) * 0.06} className="relative pl-12 sm:pl-16">
+                  <span
+                    className={cn(
+                      "absolute top-6 left-0 grid size-9 place-items-center rounded-full border-4 border-cream sm:size-11",
+                      o.current ? "bg-gold-400" : "bg-forest-700"
+                    )}
+                  >
+                    <span className={cn("size-2.5 rounded-full", o.current ? "bg-forest-950 animate-pulse" : "bg-gold-300")} />
+                  </span>
+                  <article className="rounded-md border border-border bg-white p-6 sm:p-8">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="rounded-[3px] bg-forest-50 px-2.5 py-1 font-display text-xs font-bold tracking-wider text-forest-700 uppercase">{o.kind}</span>
+                      <span className="font-display text-sm font-bold tracking-[0.12em] text-muted-foreground uppercase">{o.period}</span>
+                      {o.current && <span className="rounded-[3px] bg-gold-400 px-2.5 py-1 font-display text-xs font-bold tracking-wider text-forest-950 uppercase">Current</span>}
+                    </div>
+                    <h3 className="mt-3 text-2xl text-forest-950 sm:text-3xl">{o.title}</h3>
+                    <p className="mt-1 font-medium text-forest-600">{o.body}</p>
+                    <ul className="mt-4 grid gap-2 md:grid-cols-2">
+                      {o.highlights.map((h) => (
+                        <li key={h} className="flex gap-2.5 text-[0.95rem] text-forest-950/80">
+                          <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-forest-600" />
+                          {h}
+                        </li>
+                      ))}
+                    </ul>
+                    {count > 0 && (
+                      <Link href="/projects" className="mt-5 inline-flex items-center gap-2 py-1 font-display text-base font-bold tracking-wide text-forest-700 uppercase hover:text-forest-600">
+                        {count} projects on record <ArrowRight className="size-4" />
+                      </Link>
+                    )}
+                  </article>
+                </Reveal>
+              )
+            })}
+          </ol>
         </div>
       </section>
 
