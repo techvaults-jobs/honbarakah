@@ -1,22 +1,30 @@
 import type { Metadata, Viewport } from "next"
-import { Fraunces, Plus_Jakarta_Sans } from "next/font/google"
+import { Barlow, Barlow_Condensed, Mrs_Saint_Delafield } from "next/font/google"
 import { Header } from "@/components/site/header"
 import { Footer } from "@/components/site/footer"
 import { Toaster } from "@/components/ui/sonner"
 import { site } from "@/lib/site"
 import "./globals.css"
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const display = Barlow_Condensed({
+  variable: "--font-barlow-condensed",
   subsets: ["latin"],
-  axes: ["opsz", "SOFT"],
+  weight: ["500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
   display: "swap",
 })
 
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
+const body = Barlow({
+  variable: "--font-barlow",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+})
+
+const signature = Mrs_Saint_Delafield({
+  variable: "--font-saint",
+  subsets: ["latin"],
+  weight: "400",
   display: "swap",
 })
 
@@ -80,7 +88,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-NG" className={`${fraunces.variable} ${jakarta.variable} antialiased`}>
+    <html lang="en-NG" data-scroll-behavior="smooth" className={`${display.variable} ${body.variable} ${signature.variable} antialiased`}>
       <body className="flex min-h-svh flex-col bg-cream">
         <a
           href="#main"

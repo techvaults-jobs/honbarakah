@@ -42,7 +42,7 @@ export function GalleryGrid({ items, showFilters = true }: { items: GalleryItem[
               aria-selected={filter === f}
               onClick={() => setFilter(f)}
               className={cn(
-                "rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors",
+                "rounded-[4px] border-2 px-5 py-2 font-display text-base font-bold tracking-wide uppercase transition-colors",
                 filter === f
                   ? "border-forest-700 bg-forest-700 text-white"
                   : "border-border bg-white text-forest-900 hover:border-forest-300"
@@ -59,7 +59,7 @@ export function GalleryGrid({ items, showFilters = true }: { items: GalleryItem[
           <button
             key={item.src}
             onClick={() => setIndex(i)}
-            className="group relative block w-full break-inside-avoid overflow-hidden rounded-2xl bg-muted text-left focus-visible:ring-4 focus-visible:ring-gold-400 focus-visible:outline-none"
+            className="group relative block w-full break-inside-avoid overflow-hidden rounded-md bg-muted text-left focus-visible:ring-4 focus-visible:ring-gold-400 focus-visible:outline-none"
             aria-label={`View photo: ${item.caption}`}
           >
             <Image
@@ -80,7 +80,7 @@ export function GalleryGrid({ items, showFilters = true }: { items: GalleryItem[
       <Dialog open={index !== null} onOpenChange={(o) => !o && setIndex(null)}>
         <DialogContent
           showCloseButton={false}
-          className="max-h-[95vh] w-[min(96vw,1100px)] max-w-none gap-0 overflow-hidden rounded-2xl border-0 bg-forest-950 p-0 sm:max-w-none"
+          className="max-h-[95vh] w-[min(96vw,1100px)] max-w-none gap-0 overflow-hidden rounded-md border-0 bg-forest-950 p-0 sm:max-w-none"
         >
           {current && (
             <>

@@ -33,7 +33,7 @@ export default function GetInvolvedPage() {
         eyebrow="Get involved"
         title={
           <>
-            This movement needs <span className="text-gold-300 italic">you in it.</span>
+            This movement needs <span className="text-gold-400">you in it.</span>
           </>
         }
         intro="Campaigns are not won by candidates alone. They are won by neighbours who decide to show up. Here is how you can help."
@@ -44,9 +44,9 @@ export default function GetInvolvedPage() {
         <SectionHeading eyebrow="Ways to help" title="Pick your part" />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {ways.map((w, i) => (
-            <Reveal key={w.title} delay={i * 0.08} className="rounded-3xl border border-border bg-white p-7">
+            <Reveal key={w.title} delay={i * 0.08} className="rounded-md border border-border bg-white p-7">
               <w.icon className="size-9 text-forest-600" />
-              <h3 className="mt-5 text-xl font-semibold text-forest-950">{w.title}</h3>
+              <h3 className="mt-5 text-xl text-forest-950">{w.title}</h3>
               <p className="mt-2 leading-relaxed text-muted-foreground">{w.body}</p>
             </Reveal>
           ))}
@@ -57,17 +57,17 @@ export default function GetInvolvedPage() {
         <div className="container-x grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div>
             <Eyebrow>Volunteer sign-up</Eyebrow>
-            <h2 className="mt-4 text-4xl leading-[1.05] font-semibold text-forest-950 sm:text-5xl">
-              Put your name down. <span className="text-forest-600 italic">We will do the rest.</span>
+            <h2 className="mt-4 text-5xl text-forest-950 sm:text-6xl">
+              Put your name down. <span className="text-forest-600">We will do the rest.</span>
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
               Fill the form and a coordinator from your ward will call you. It takes less than two minutes.
             </p>
-            <div className="relative mt-10 hidden aspect-[4/3] overflow-hidden rounded-[2rem] lg:block">
+            <div className="relative mt-10 hidden aspect-[4/3] overflow-hidden rounded-md lg:block">
               <Image src="/images/campaign-office-team.jpg" alt="Barakat Odunuga-Bakare with campaign volunteers" fill sizes="40vw" className="object-cover" />
             </div>
           </div>
-          <Reveal className="rounded-[2rem] border border-border bg-cream p-6 sm:p-10">
+          <Reveal className="rounded-md border border-border bg-cream p-6 sm:p-10">
             <VolunteerForm />
           </Reveal>
         </div>
@@ -75,13 +75,13 @@ export default function GetInvolvedPage() {
 
       <section id="vote" className="scroll-mt-24 bg-forest-950 py-24 text-white sm:py-28">
         <div className="container-x">
-          <SectionHeading light eyebrow="Voter checklist" title={<>Ready to vote? <span className="text-gold-300 italic">Three steps.</span></>} />
+          <SectionHeading light eyebrow="Voter checklist" title={<>Ready to vote? <span className="text-gold-400">Three steps.</span></>} />
           <ol className="mt-12 grid gap-5 md:grid-cols-3">
             {checklist.map((c, i) => (
-              <Reveal as="li" key={c.title} delay={i * 0.08} className="relative rounded-3xl border border-white/10 bg-white/[0.04] p-8">
-                <span className="absolute top-6 right-7 font-heading text-6xl font-semibold text-white/10">{i + 1}</span>
+              <Reveal as="li" key={c.title} delay={i * 0.08} className="relative rounded-md border border-white/10 bg-white/[0.04] p-8">
+                <span className="absolute top-6 right-7 font-display text-6xl font-black text-white/10">{i + 1}</span>
                 <c.icon className="size-9 text-gold-400" />
-                <h3 className="mt-5 text-2xl font-semibold">{c.title}</h3>
+                <h3 className="mt-5 text-[1.75rem]">{c.title}</h3>
                 <p className="mt-2 leading-relaxed text-white/65">{c.body}</p>
               </Reveal>
             ))}

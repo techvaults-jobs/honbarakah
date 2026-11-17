@@ -16,11 +16,12 @@ const involve = [
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-forest-950 text-white">
+      <div className="flag-stripe relative h-1.5" />
       <div className="bg-grain pointer-events-none absolute inset-0 opacity-60" />
       <div className="container-x relative">
         <div className="grid gap-10 border-b border-white/10 py-14 lg:grid-cols-[1.2fr_1fr] lg:items-center">
           <div>
-            <p className="font-heading text-3xl leading-tight font-semibold text-balance sm:text-4xl">
+            <p className="font-display text-4xl leading-[0.95] font-black text-balance uppercase sm:text-5xl">
               Get campaign news before anyone else.
             </p>
             <p className="mt-3 max-w-lg text-white/60">
@@ -36,12 +37,12 @@ export function Footer() {
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/60">
               {site.fullTitle}. APC candidate for the Lagos State House of Assembly, {site.constituency}.
             </p>
-            <p className="mt-5 font-heading text-lg text-gold-300 italic">Àjùmọ̀ṣe, Àjùmọ̀jẹ.</p>
+            <p className="mt-5 font-display text-xl font-bold tracking-wide text-gold-400 uppercase">Àjùmọ̀ṣe, Àjùmọ̀jẹ.</p>
             <SocialLinks className="mt-5" itemClassName="bg-white/5 hover:bg-gold-400 hover:text-forest-950" />
           </div>
 
           <div>
-            <h3 className="font-sans text-xs font-bold tracking-[0.2em] text-gold-300 uppercase">Explore</h3>
+            <h3 className="text-xl tracking-wide text-gold-400">Explore</h3>
             <ul className="mt-5 space-y-3 text-sm text-white/70">
               {nav.map((item) => (
                 <li key={item.href}>
@@ -54,7 +55,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-sans text-xs font-bold tracking-[0.2em] text-gold-300 uppercase">Get involved</h3>
+            <h3 className="text-xl tracking-wide text-gold-400">Get involved</h3>
             <ul className="mt-5 space-y-3 text-sm text-white/70">
               {involve.map((item) => (
                 <li key={item.href}>
@@ -67,7 +68,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-sans text-xs font-bold tracking-[0.2em] text-gold-300 uppercase">Reach the campaign</h3>
+            <h3 className="text-xl tracking-wide text-gold-400">Reach the campaign</h3>
             <ul className="mt-5 space-y-4 text-sm text-white/70">
               <li className="flex gap-3">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-gold-400" />

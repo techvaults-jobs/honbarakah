@@ -40,12 +40,12 @@ export function NewsletterForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Your email address"
-        className="h-13 flex-1 rounded-full border border-white/15 bg-white/5 px-6 text-white placeholder:text-white/40 focus:border-gold-400 focus:outline-none"
+        className="h-14 flex-1 rounded-[4px] border border-white/15 bg-white/5 px-5 text-white placeholder:text-white/40 focus:border-gold-400 focus:outline-none"
       />
       <button
         type="submit"
         disabled={pending}
-        className="inline-flex h-13 items-center justify-center gap-2 rounded-full bg-gold-400 px-7 font-bold text-forest-950 transition-colors hover:bg-gold-300 disabled:opacity-70"
+        className="inline-flex h-14 items-center justify-center gap-2 rounded-[4px] bg-gold-400 px-7 font-display text-lg font-bold tracking-wide text-forest-950 uppercase transition-colors hover:bg-gold-300 disabled:opacity-70"
       >
         {pending ? <Loader2 className="size-4 animate-spin" /> : null}
         Subscribe

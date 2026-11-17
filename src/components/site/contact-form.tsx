@@ -37,13 +37,13 @@ export function ContactForm() {
 
   if (done) {
     return (
-      <div className="flex flex-col items-center rounded-3xl bg-forest-50 px-6 py-14 text-center">
+      <div className="flex flex-col items-center rounded-md bg-forest-50 px-6 py-14 text-center">
         <CheckCircle2 className="size-14 text-forest-600" />
-        <h3 className="mt-5 text-3xl font-semibold text-forest-950">Message received.</h3>
+        <h3 className="mt-5 text-3xl text-forest-950">Message received.</h3>
         <p className="mt-3 max-w-md text-muted-foreground">
           Thank you for writing. Someone from the team will read your message and get back to you.
         </p>
-        <Button variant="outline" className="mt-8 h-11 rounded-full px-6" onClick={() => setDone(false)}>
+        <Button variant="outline" className="mt-8 h-11 rounded-[4px] px-6 font-display text-base font-bold uppercase" onClick={() => setDone(false)}>
           Send another message
         </Button>
       </div>
@@ -83,11 +83,11 @@ export function ContactForm() {
       </Field>
       <div className="sm:col-span-2">
         <Field id="c-message" label="Your message" error={errors.message?.message}>
-          <Textarea id="c-message" rows={6} className="rounded-xl bg-white px-4 py-3 text-base" aria-invalid={!!errors.message} {...register("message")} />
+          <Textarea id="c-message" rows={6} className="rounded-[4px] bg-white px-4 py-3 text-base" aria-invalid={!!errors.message} {...register("message")} />
         </Field>
       </div>
       <div className="sm:col-span-2">
-        <Button type="submit" disabled={isSubmitting} className="h-13 rounded-full bg-forest-700 px-10 text-base font-bold hover:bg-forest-800">
+        <Button type="submit" disabled={isSubmitting} className="h-14 rounded-[4px] bg-forest-700 px-10 font-display text-lg font-bold tracking-wide uppercase hover:bg-forest-600">
           {isSubmitting ? <Loader2 className="animate-spin" /> : <Send />}
           Send message
         </Button>

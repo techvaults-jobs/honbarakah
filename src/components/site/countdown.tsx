@@ -29,16 +29,22 @@ export function Countdown({ date }: { date: string }) {
       {(["Days", "Hours", "Minutes", "Seconds"] as const).map((unit) => (
         <div
           key={unit}
-          className="rounded-2xl border border-white/10 bg-white/5 px-2 py-4 text-center backdrop-blur sm:px-4 sm:py-6"
+          className="relative overflow-hidden rounded-[4px] border-b-4 border-gold-400 bg-white px-2 py-4 text-center text-forest-950 shadow-xl sm:px-4 sm:py-6"
         >
-          <div className="font-heading text-3xl font-semibold text-gold-300 tabular-nums sm:text-5xl">
+          <div className="font-display text-4xl leading-none font-black tabular-nums sm:text-6xl">
             {left ? String(left[unit]).padStart(2, "0") : "--"}
           </div>
-          <div className="mt-1 text-[0.65rem] font-semibold tracking-[0.2em] text-white/60 uppercase sm:text-xs">
+          <div className="mt-2 font-display text-xs font-bold tracking-[0.2em] text-forest-600 uppercase sm:text-sm">
             {unit}
           </div>
         </div>
       ))}
     </div>
   )
+}
+
+export function DaysLeft({ date }: { date: string }) {
+  const now = useSyncExternalStore(subscribe, nowSeconds, () => null)
+  if (now === null) return <span className="tabular-nums">--</span>
+  return <span className="tabular-nums">{diff(new Date(date).getTime()).Days}</span>
 }

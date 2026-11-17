@@ -17,7 +17,7 @@ export default function GalleryPage() {
         eyebrow="Gallery"
         title={
           <>
-            In the room, <span className="text-gold-300 italic">on the street.</span>
+            In the room, <span className="text-gold-400">on the street.</span>
           </>
         }
         intro="Ward meetings, site visits, campaign moments and the people who make this movement."

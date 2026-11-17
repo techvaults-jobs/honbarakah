@@ -28,7 +28,7 @@ export function Field({ id, label, error, children }: { id: string; label: strin
   )
 }
 
-export const inputClass = "h-12 rounded-xl border-input bg-white px-4 text-base shadow-none focus-visible:border-forest-600 focus-visible:ring-forest-600/15"
+export const inputClass = "h-12 rounded-[4px] border-input bg-white px-4 text-base shadow-none focus-visible:border-forest-600 focus-visible:ring-forest-600/15"
 
 export function VolunteerForm() {
   const [done, setDone] = useState(false)
@@ -55,13 +55,13 @@ export function VolunteerForm() {
 
   if (done) {
     return (
-      <div className="flex flex-col items-center rounded-3xl bg-forest-50 px-6 py-14 text-center">
+      <div className="flex flex-col items-center rounded-md bg-forest-50 px-6 py-14 text-center">
         <CheckCircle2 className="size-14 text-forest-600" />
-        <h3 className="mt-5 text-3xl font-semibold text-forest-950">Welcome to the team.</h3>
+        <h3 className="mt-5 text-4xl text-forest-950">Welcome to the team.</h3>
         <p className="mt-3 max-w-md text-muted-foreground">
           Thank you for stepping forward. A coordinator from your ward will reach out to you within a few days.
         </p>
-        <Button variant="outline" className="mt-8 h-11 rounded-full px-6" onClick={() => setDone(false)}>
+        <Button variant="outline" className="mt-8 h-11 rounded-[4px] px-6 font-display text-base font-bold uppercase" onClick={() => setDone(false)}>
           Register someone else
         </Button>
       </div>
@@ -106,11 +106,11 @@ export function VolunteerForm() {
       </div>
       <div className="sm:col-span-2">
         <Field id="v-message" label="Anything else we should know? (optional)">
-          <Textarea id="v-message" rows={4} className="rounded-xl bg-white px-4 py-3 text-base" {...register("message")} />
+          <Textarea id="v-message" rows={4} className="rounded-[4px] bg-white px-4 py-3 text-base" {...register("message")} />
         </Field>
       </div>
       <div className="sm:col-span-2">
-        <Button type="submit" disabled={isSubmitting} className="h-13 w-full rounded-full bg-forest-700 text-base font-bold hover:bg-forest-800 sm:w-auto sm:px-10">
+        <Button type="submit" disabled={isSubmitting} className="h-14 w-full rounded-[4px] bg-forest-700 font-display text-lg font-bold tracking-wide uppercase hover:bg-forest-600 sm:w-auto sm:px-10">
           {isSubmitting && <Loader2 className="animate-spin" />}
           Count me in
         </Button>

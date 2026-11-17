@@ -4,21 +4,28 @@ import { cn } from "@/lib/utils"
 export function Logo({ className, light = false }: { className?: string; light?: boolean }) {
   return (
     <Link href="/" aria-label="Barakat Odunuga-Bakare, home" className={cn("group flex items-center gap-3", className)}>
-      <span
-        className={cn(
-          "grid size-11 place-items-center rounded-full border-2 font-heading text-lg font-bold italic transition-transform group-hover:-rotate-6",
-          light ? "border-gold-400 bg-forest-900 text-gold-300" : "border-forest-600 bg-forest-700 text-gold-300"
-        )}
-      >
-        B
+      <span className="relative grid h-12 w-12 shrink-0 place-items-center overflow-hidden rounded-[4px] bg-forest-700 shadow-lg shadow-forest-900/30 transition-transform group-hover:-rotate-3">
+        <span className="font-display text-[1.35rem] leading-none font-black tracking-tight text-white">
+          B<span className="text-gold-400">O</span>B
+        </span>
+        <span className="flag-stripe absolute inset-x-0 bottom-0 h-1" />
       </span>
       <span className="leading-none">
-        <span className={cn("block font-heading text-xl font-bold tracking-tight", light ? "text-white" : "text-forest-900")}>
-          B<span className="text-gold-500">.</span>O<span className="text-gold-500">.</span>B
-          <span className={cn("ml-1.5 font-sans text-sm font-semibold", light ? "text-gold-300" : "text-forest-600")}>2027</span>
+        <span
+          className={cn(
+            "block font-display text-[1.4rem] leading-[0.9] font-extrabold tracking-tight uppercase",
+            light ? "text-white" : "text-forest-950"
+          )}
+        >
+          Barakat <span className={light ? "text-gold-400" : "text-forest-600"}>Odunuga-Bakare</span>
         </span>
-        <span className={cn("mt-1 block text-[0.62rem] font-semibold tracking-[0.22em] uppercase", light ? "text-white/60" : "text-muted-foreground")}>
-          Barakat Odunuga-Bakare
+        <span
+          className={cn(
+            "mt-1 block font-display text-[0.7rem] font-semibold tracking-[0.24em] uppercase",
+            light ? "text-white/60" : "text-forest-950/55"
+          )}
+        >
+          Surulere Constituency I &middot; 2027
         </span>
       </span>
     </Link>

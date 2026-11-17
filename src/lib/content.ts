@@ -37,6 +37,7 @@ export const credentials = [
 export type Pillar = {
   slug: string
   icon: LucideIcon
+  image: string
   title: string
   summary: string
   why: string
@@ -46,6 +47,7 @@ export type Pillar = {
 export const pillars: Pillar[] = [
   {
     slug: "housing",
+    image: "/images/site-walk.jpg",
     icon: Building2,
     title: "Housing and Urban Renewal",
     summary:
@@ -60,6 +62,7 @@ export const pillars: Pillar[] = [
   },
   {
     slug: "education",
+    image: "/images/teachers-day.jpg",
     icon: GraduationCap,
     title: "Quality Education",
     summary:
@@ -74,6 +77,7 @@ export const pillars: Pillar[] = [
   },
   {
     slug: "youth",
+    image: "/images/volunteers-jersey.jpg",
     icon: Rocket,
     title: "Youth Empowerment",
     summary:
@@ -88,6 +92,7 @@ export const pillars: Pillar[] = [
   },
   {
     slug: "economy",
+    image: "/images/stakeholders-anthem.jpg",
     icon: HandCoins,
     title: "Economic Inclusion",
     summary:
@@ -102,6 +107,7 @@ export const pillars: Pillar[] = [
   },
   {
     slug: "security",
+    image: "/images/leaders-group.jpg",
     icon: ShieldCheck,
     title: "Community Security",
     summary:
@@ -116,6 +122,7 @@ export const pillars: Pillar[] = [
   },
   {
     slug: "growth",
+    image: "/images/site-inspection.jpg",
     icon: Leaf,
     title: "Sustainable Growth",
     summary:
@@ -386,4 +393,66 @@ export function formatDate(iso: string) {
     year: "numeric",
     timeZone: "Africa/Lagos",
   }).format(new Date(iso))
+}
+
+export type CampaignEvent = {
+  date: string
+  time?: string
+  title: string
+  venue: string
+  body: string
+  tag: string
+  href?: string
+}
+
+// Keep this list to confirmed dates only. Upcoming rallies and town halls go here as the team fixes them.
+export const events: CampaignEvent[] = [
+  {
+    date: "2027-03-06",
+    time: "8:00 AM",
+    title: "Lagos State House of Assembly Election",
+    venue: "Your polling unit, Surulere Constituency I",
+    body: "The day it all counts. Bring your PVC, vote early and stay to see the results announced.",
+    tag: "Election Day",
+    href: "/get-involved#vote",
+  },
+  {
+    date: "2026-08-20",
+    title: "Commissioning of the Campaign Offices",
+    venue: "Surulere, Lagos",
+    body: "Party leaders, lawmakers, artisans and religious leaders opened the B.O.B 2027 campaign offices.",
+    tag: "Campaign",
+    href: "/news/campaign-offices-commissioned",
+  },
+  {
+    date: "2026-05-17",
+    time: "10:00 AM",
+    title: "Official Declaration",
+    venue: "The Stable (Union Bank), 41 Bode Thomas Street, Surulere",
+    body: "Barakat formally declared for Surulere Constituency I under the banner Àjùmọ̀ṣe, Àjùmọ̀jẹ.",
+    tag: "Declaration",
+    href: "/news/official-declaration",
+  },
+  {
+    date: "2026-01-01",
+    title: "Declaration of Interest",
+    venue: "Surulere, Lagos",
+    body: "On the first day of the year, she announced her bid to represent Surulere in the Assembly.",
+    tag: "Announcement",
+    href: "/news/declaration-of-interest",
+  },
+]
+
+export const posters = [
+  { src: "/images/bob-2027-poster.jpg", alt: "B.O.B 2027 campaign poster: Support and vote Hon. Barakat Odunuga-Bakare", w: 968, h: 1280 },
+  { src: "/images/declaration-poster.jpg", alt: "Official declaration poster for Hon. (Barr.) Barakat Odunuga-Bakare", w: 554, h: 554 },
+  { src: "/images/appreciation-flyer.jpg", alt: "Appreciation message after the commissioning of the campaign offices", w: 1073, h: 1280 },
+  { src: "/images/independence-day.jpg", alt: "Independence Day message from Hon. Barakat Odunuga-Bakare", w: 1254, h: 1254 },
+  { src: "/images/teachers-day.jpg", alt: "Teachers' Day message from Hon. Barakat Odunuga-Bakare", w: 896, h: 1200 },
+]
+
+export function dateParts(iso: string) {
+  const d = new Date(iso + "T12:00:00+01:00")
+  const f = (o: Intl.DateTimeFormatOptions) => new Intl.DateTimeFormat("en-GB", { ...o, timeZone: "Africa/Lagos" }).format(d)
+  return { day: f({ day: "2-digit" }), month: f({ month: "short" }), year: f({ year: "numeric" }), weekday: f({ weekday: "long" }) }
 }
