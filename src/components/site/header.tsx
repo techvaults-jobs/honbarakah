@@ -69,7 +69,7 @@ export function Header() {
               {nav.map((item) => {
                 const active = groupActive(item)
                 const linkClass = cn(
-                  "relative flex items-center gap-1 px-2 py-2 font-sans text-[0.85rem] font-bold tracking-wide whitespace-nowrap uppercase transition-colors 2xl:px-2.5 2xl:text-[0.95rem]",
+                  "relative flex items-center gap-1 px-2 py-2 font-sans text-[0.8rem] font-bold tracking-wide whitespace-nowrap uppercase transition-colors 2xl:px-2.5 2xl:text-[0.875rem]",
                   scrolled
                     ? active
                       ? "text-forest-600"
@@ -115,7 +115,7 @@ export function Header() {
                               )}
                             >
                               <span className="min-w-0 flex-1">
-                                <span className="block font-sans text-lg leading-tight font-bold text-forest-950 uppercase group-hover/item:text-forest-700">
+                                <span className="block font-sans text-base leading-tight font-bold text-forest-950 uppercase group-hover/item:text-forest-700">
                                   {c.label}
                                 </span>
                                 {c.note && <span className="mt-0.5 block text-sm text-muted-foreground">{c.note}</span>}
@@ -161,7 +161,7 @@ export function Header() {
                           <Link
                             href="/"
                             className={cn(
-                              "flex items-center rounded-[4px] px-3 py-2 font-sans text-[1.7rem] font-bold uppercase transition-colors",
+                              "flex items-center rounded-[4px] px-3 py-2 font-sans text-[1.25rem] font-bold uppercase transition-colors",
                               pathname === "/" ? "bg-white/10 text-gold-400" : "text-white hover:bg-white/5"
                             )}
                           >
@@ -198,7 +198,7 @@ export function Header() {
                               <Link
                                 href={item.href}
                                 className={cn(
-                                  "flex items-center rounded-[4px] px-3 py-2 font-sans text-[1.7rem] font-bold uppercase transition-colors",
+                                  "flex items-center rounded-[4px] px-3 py-2 font-sans text-[1.25rem] font-bold uppercase transition-colors",
                                   isActive(item.href) ? "bg-white/10 text-gold-400" : "text-white hover:bg-white/5"
                                 )}
                               >
