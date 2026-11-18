@@ -7,6 +7,7 @@ import { Countdown } from "@/components/site/countdown"
 import { Eyebrow, Hi, SectionHeading } from "@/components/site/section-heading"
 import { CredentialMarquee, CtaBand, NewsCard } from "@/components/site/blocks"
 import { CtaLink } from "@/components/site/cta-link"
+import { ApcBadge } from "@/components/site/apc-seal"
 import { AgendaExplorer } from "@/components/site/agenda-explorer"
 import { communityRecord, dateParts, events, gallery, journey, news, pillars, posters, stats } from "@/lib/content"
 import { site } from "@/lib/site"
@@ -54,21 +55,7 @@ export default function HomePage() {
         <div className="container-x relative flex min-h-[100svh] flex-col justify-end pt-[52svh] pb-14 md:min-h-[56rem] md:justify-center md:pt-44 md:pb-40 lg:min-h-[100svh] lg:pb-36">
           <div className="max-w-3xl md:max-w-[58%] lg:max-w-[52%]">
             <Reveal>
-              <div className="flex flex-wrap items-center gap-x-5 gap-y-4">
-                <div className="inline-flex items-center gap-4 rounded-full bg-white/10 py-1.5 pr-6 pl-1.5 ring-1 ring-white/15 backdrop-blur-sm">
-                  <Image
-                    src="/images/apc-logo.jpeg"
-                    alt="All Progressives Congress (APC) logo"
-                    width={400}
-                    height={400}
-                    className="size-16 shrink-0 rounded-full object-cover ring-[3px] ring-gold-400 shadow-lg shadow-black/40"
-                  />
-                  <span className="leading-tight">
-                    <span className="block font-sans text-xs font-bold tracking-[0.14em] text-gold-300 uppercase">Official candidate of the</span>
-                    <span className="block font-sans text-lg font-bold text-white sm:text-xl">All Progressives Congress</span>
-                  </span>
-                </div>
-              </div>
+              <ApcBadge />
               <p className="mt-6 font-sans text-sm font-bold tracking-[0.16em] text-gold-300 uppercase sm:text-base">
                 Lagos State House of Assembly &middot; {site.constituency}
               </p>
@@ -340,30 +327,39 @@ export default function HomePage() {
       </section>
 
       {/* ───────── Countdown ───────── */}
-      <section className="relative isolate overflow-hidden bg-gold-400 py-20 text-forest-950 sm:py-24">
-        <div className="absolute inset-0 -z-10 bg-[repeating-linear-gradient(-45deg,transparent_0_18px,rgba(0,0,0,0.035)_18px_36px)]" />
-        <div className="container-x grid items-center gap-12 lg:grid-cols-[1fr_1.1fr]">
+      <section className="relative isolate overflow-hidden bg-forest-950 py-16 text-white sm:py-20">
+        <div className="bg-stripes absolute inset-0 -z-10 opacity-40" />
+        <Image
+          src="/images/apc-logo.jpeg"
+          alt=""
+          width={400}
+          height={400}
+          aria-hidden
+          className="pointer-events-none absolute -right-[8%] top-1/2 -z-10 hidden w-[min(30rem,40vw)] -translate-y-1/2 opacity-[0.07] mask-[linear-gradient(to_left,black_30%,transparent_80%)] lg:block"
+        />
+        <div className="flag-stripe absolute inset-x-0 top-0 h-1.5" />
+        <div className="container-x grid items-center gap-10 lg:grid-cols-[1fr_1.1fr]">
           <Reveal>
-            <span className="inline-flex rounded-[3px] border-2 border-forest-950 px-2.5 py-1 font-sans text-sm font-bold tracking-[0.14em] uppercase">
+            <span className="inline-flex rounded-[3px] border-2 border-gold-400/70 px-2.5 py-1 font-sans text-xs font-bold tracking-[0.14em] text-gold-300 uppercase">
               Àjùmọ̀ṣe, Àjùmọ̀jẹ
             </span>
-            <h2 className="mt-6 text-4xl sm:text-5xl lg:text-6xl">
-              What we build together, <span className="text-forest-700">we share together.</span>
+            <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl">
+              What we build together, <span className="text-gold-400">we share together.</span>
             </h2>
-            <p className="mt-5 max-w-lg text-lg text-forest-950/75">
+            <p className="mt-4 max-w-lg text-base text-white/75 sm:text-lg">
               Election day is coming. Make sure your Permanent Voter&apos;s Card is ready, know your polling unit, and bring one more person with you.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <CtaLink href="/election-2027#agents" variant="green" icon={ShieldCheck}>
+              <CtaLink href="/election-2027#agents" variant="gold" icon={ShieldCheck}>
                 Become an agent
               </CtaLink>
-              <CtaLink href="/election-2027#vote" variant="ghostDark" icon={Vote}>
+              <CtaLink href="/election-2027#vote" variant="outline" icon={Vote}>
                 Voter checklist
               </CtaLink>
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mb-4 font-sans text-lg font-bold tracking-[0.14em] uppercase">Countdown to election day</p>
+            <p className="mb-4 font-sans text-sm font-bold tracking-[0.16em] text-gold-300 uppercase">Countdown to election day</p>
             <Countdown date={site.election.date} />
           </Reveal>
         </div>

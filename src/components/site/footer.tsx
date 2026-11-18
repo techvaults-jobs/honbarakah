@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Mail, MapPin, Phone } from "lucide-react"
 import { allPages, site } from "@/lib/site"
+import { ApcBadge } from "./apc-seal"
 import { Logo } from "./logo"
 import { SocialLinks } from "./social-icons"
 import { NewsletterForm } from "./newsletter-form"
@@ -38,10 +39,11 @@ export function Footer() {
         <div className="grid gap-12 py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.2fr_1.1fr]">
           <div>
             <Logo light />
+            <ApcBadge className="mt-6" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/60">
               {site.fullTitle}. APC candidate for the Lagos State House of Assembly, {site.constituency}.
             </p>
-            <p className="mt-5 font-sans text-xl font-bold tracking-wide text-gold-400 uppercase">Àjùmọ̀ṣe, Àjùmọ̀jẹ.</p>
+            <p className="mt-5 font-sans text-base font-bold tracking-wide text-gold-400 uppercase">Àjùmọ̀ṣe, Àjùmọ̀jẹ.</p>
             <SocialLinks className="mt-5" itemClassName="bg-white/5 hover:bg-gold-400 hover:text-forest-950" />
           </div>
 

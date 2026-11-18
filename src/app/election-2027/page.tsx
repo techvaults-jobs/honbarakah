@@ -44,12 +44,13 @@ export default function ElectionPage() {
       />
 
       {/* Countdown */}
-      <section className="relative isolate overflow-hidden bg-gold-400 py-14 text-forest-950 sm:py-16">
-        <div className="absolute inset-0 -z-10 bg-[repeating-linear-gradient(-45deg,transparent_0_18px,rgba(0,0,0,0.035)_18px_36px)]" />
+      <section className="relative isolate overflow-hidden bg-forest-950 py-14 text-white sm:py-16">
+        <div className="bg-stripes absolute inset-0 -z-10 opacity-40" />
+        <div className="flag-stripe absolute inset-x-0 top-0 h-1.5" />
         <div className="container-x grid items-center gap-8 lg:grid-cols-[1fr_1.2fr]">
           <div>
-            <p className="font-sans text-sm font-bold tracking-[0.16em] uppercase">{site.election.label}</p>
-            <h2 className="mt-2 text-4xl sm:text-5xl">The countdown is on.</h2>
+            <p className="font-sans text-xs font-bold tracking-[0.16em] text-gold-300 uppercase sm:text-sm">{site.election.label}</p>
+            <h2 className="mt-2 text-3xl sm:text-4xl">The countdown is on.</h2>
           </div>
           <Countdown date={site.election.date} />
         </div>

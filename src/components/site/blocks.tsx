@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils"
 import { Eyebrow } from "./section-heading"
 import { Reveal } from "./reveal"
 import { CtaLink } from "./cta-link"
+import { ApcSeal } from "./apc-seal"
 
 export function PageHero({
   eyebrow,
@@ -37,7 +38,10 @@ export function PageHero({
           <span className="text-gold-400">{crumb}</span>
         </nav>
         <Reveal className="max-w-2xl">
-          <Eyebrow light>{eyebrow}</Eyebrow>
+          <div className="flex items-center gap-4">
+            <ApcSeal className="size-12" />
+            <Eyebrow light>{eyebrow}</Eyebrow>
+          </div>
           <h1 className="mt-6 text-5xl text-balance sm:text-6xl lg:text-7xl">{title}</h1>
           {intro && <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80 sm:text-xl">{intro}</p>}
         </Reveal>
