@@ -39,14 +39,14 @@ export default function HomePage() {
           aria-hidden
           className="pointer-events-none absolute -top-[4%] -left-[12%] -z-10 hidden w-[min(40rem,58vw)] opacity-20 mask-[linear-gradient(to_bottom,black_20%,transparent_72%)] md:block"
         />
-        <div className="absolute inset-x-0 top-0 -z-10 h-[64svh] md:inset-x-auto md:inset-y-0 md:right-0 md:h-auto md:w-[42%] md:mask-[linear-gradient(to_right,transparent_0%,black_24%)] lg:w-[44%]">
+        <div className="absolute inset-x-0 top-0 -z-10 h-[64svh] md:inset-x-auto md:inset-y-0 md:right-0 md:h-auto md:w-[42%] md:mask-[linear-gradient(to_right,transparent_0%,black_24%,black_86%,transparent_100%)] lg:w-[44%]">
           <Image
-            src="/images/portrait-green.jpg"
+            src="/images/barak-banner.jpg"
             alt="Hon. (Barr.) Barakat Odunuga-Bakare"
             fill
             priority
             sizes="(min-width: 768px) 44vw, 100vw"
-            className="object-cover object-[center_15%]"
+            className="object-cover object-[center_18%]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-forest-700 via-forest-700/20 to-transparent" />
         </div>
