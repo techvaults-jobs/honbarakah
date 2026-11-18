@@ -34,7 +34,7 @@ export default function AgendaPage() {
             <a
               key={p.slug}
               href={`#${p.slug}`}
-              className="flex shrink-0 items-center gap-2 rounded-[4px] border-2 border-forest-950/10 bg-white px-4 py-2 font-display text-base font-bold tracking-wide text-forest-900 uppercase transition-colors hover:border-forest-600 hover:text-forest-700"
+              className="flex shrink-0 items-center gap-2 rounded-[4px] border-2 border-forest-950/10 bg-white px-4 py-2 font-sans text-base font-bold tracking-wide text-forest-900 uppercase transition-colors hover:border-forest-600 hover:text-forest-700"
             >
               <p.icon className="size-4 text-forest-600" />
               {p.title}
@@ -89,7 +89,7 @@ export default function AgendaPage() {
           </div>
           <Link
             href="/contact"
-            className="inline-flex h-14 shrink-0 items-center gap-2 rounded-[4px] bg-forest-700 px-7 font-display text-lg font-bold tracking-wide text-white uppercase transition-colors hover:bg-forest-600"
+            className="inline-flex h-14 shrink-0 items-center gap-2 rounded-[4px] bg-forest-700 px-7 font-sans text-lg font-bold tracking-wide text-white uppercase transition-colors hover:bg-forest-600"
           >
             Share your idea
             <ArrowRight className="size-4" />

@@ -37,7 +37,7 @@ export default function NewsPage() {
               <Image src={featured.image} alt="" fill priority sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
             <div className="flex flex-col justify-center p-8 sm:p-12">
-              <span className="w-fit rounded-[3px] bg-gold-400 px-3 py-1 font-display text-sm font-bold tracking-wider text-forest-950 uppercase">Latest</span>
+              <span className="w-fit rounded-[3px] bg-gold-400 px-3 py-1 font-sans text-sm font-bold tracking-wider text-forest-950 uppercase">Latest</span>
               {featured.date && (
                 <p className="mt-5 text-sm font-semibold tracking-[0.15em] text-muted-foreground uppercase">{formatDate(featured.date)}</p>
               )}

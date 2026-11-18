@@ -54,7 +54,7 @@ export default function PrivacyPage() {
     <>
       <header className="bg-forest-950 pt-36 pb-14 text-white sm:pt-44">
         <div className="container-x max-w-3xl">
-          <p className="font-display text-sm font-bold tracking-[0.16em] text-gold-400 uppercase">Data protection</p>
+          <p className="font-sans text-sm font-bold tracking-[0.16em] text-gold-400 uppercase">Data protection</p>
           <h1 className="mt-4 text-5xl sm:text-6xl">Privacy policy</h1>
           <p className="mt-5 text-lg text-white/70">Plain language on what happens to the details you share with us.</p>
         </div>

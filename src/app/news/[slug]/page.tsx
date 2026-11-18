@@ -49,7 +49,7 @@ async function NewsArticle({ params }: { params: PageProps<"/news/[slug]">["para
               All news
             </Link>
             <div className="mt-8 flex flex-wrap items-center gap-4 text-sm">
-              <span className="rounded-[3px] bg-gold-400 px-3 py-1 font-display font-bold tracking-wider text-forest-950 uppercase">{item.category}</span>
+              <span className="rounded-[3px] bg-gold-400 px-3 py-1 font-sans font-bold tracking-wider text-forest-950 uppercase">{item.category}</span>
               {item.date && (
                 <span className="flex items-center gap-2 text-white/60">
                   <Calendar className="size-4" />
@@ -71,7 +71,7 @@ async function NewsArticle({ params }: { params: PageProps<"/news/[slug]">["para
         <div className="container-x max-w-3xl py-16 sm:py-20">
           <Reveal className="space-y-6 text-lg leading-[1.8] text-forest-950/85">
             {item.body.map((para, i) => (
-              <p key={i} className={i === 0 ? "text-xl font-medium text-forest-950 first-letter:float-left first-letter:mr-3 first-letter:font-display first-letter:text-7xl first-letter:leading-[0.8] first-letter:font-bold first-letter:text-forest-700" : undefined}>
+              <p key={i} className={i === 0 ? "text-xl font-medium text-forest-950 first-letter:float-left first-letter:mr-3 first-letter:font-sans first-letter:text-7xl first-letter:leading-[0.8] first-letter:font-bold first-letter:text-forest-700" : undefined}>
                 {para}
               </p>
             ))}

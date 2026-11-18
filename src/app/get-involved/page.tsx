@@ -84,7 +84,7 @@ export default function GetInvolvedPage() {
                   <m.icon className="size-9 text-gold-400" />
                   <h3 className="mt-5 text-2xl">{m.title}</h3>
                   <p className="mt-2 leading-relaxed text-white/65">{m.body}</p>
-                  <span className="mt-auto flex items-center gap-2 pt-6 font-display text-base font-bold tracking-wide text-gold-400 uppercase">
+                  <span className="mt-auto flex items-center gap-2 pt-6 font-sans text-base font-bold tracking-wide text-gold-400 uppercase">
                     {m.cta} <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                   </span>
                 </Link>

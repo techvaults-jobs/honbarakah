@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next"
-import { Barlow, Barlow_Condensed, Mrs_Saint_Delafield } from "next/font/google"
+import { IBM_Plex_Serif, Mrs_Saint_Delafield, Red_Hat_Display } from "next/font/google"
 import { Header } from "@/components/site/header"
 import { Footer } from "@/components/site/footer"
 import { MobileActionBar } from "@/components/site/mobile-action-bar"
@@ -7,18 +7,18 @@ import { Toaster } from "@/components/ui/sonner"
 import { site } from "@/lib/site"
 import "./globals.css"
 
-const display = Barlow_Condensed({
-  variable: "--font-barlow-condensed",
+const display = IBM_Plex_Serif({
+  variable: "--font-ibm-plex-serif",
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
 })
 
-const body = Barlow({
-  variable: "--font-barlow",
+const body = Red_Hat_Display({
+  variable: "--font-red-hat-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
 })
 

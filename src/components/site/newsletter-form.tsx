@@ -45,7 +45,7 @@ export function NewsletterForm() {
       <button
         type="submit"
         disabled={pending}
-        className="inline-flex h-14 items-center justify-center gap-2 rounded-[4px] bg-gold-400 px-7 font-display text-lg font-bold tracking-wide text-forest-950 uppercase transition-colors hover:bg-gold-300 disabled:opacity-70"
+        className="inline-flex h-14 items-center justify-center gap-2 rounded-[4px] bg-gold-400 px-7 font-sans text-lg font-bold tracking-wide text-forest-950 uppercase transition-colors hover:bg-gold-300 disabled:opacity-70"
       >
         {pending ? <Loader2 className="size-4 animate-spin" /> : null}
         Subscribe

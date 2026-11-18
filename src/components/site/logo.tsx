@@ -5,7 +5,7 @@ export function Logo({ className, light = false }: { className?: string; light?:
   return (
     <Link href="/" aria-label="Barakat Odunuga-Bakare, home" className={cn("group flex items-center gap-3", className)}>
       <span className="relative grid h-12 w-12 shrink-0 place-items-center overflow-hidden rounded-[4px] bg-forest-700 shadow-lg shadow-forest-900/30 transition-transform group-hover:-rotate-3">
-        <span className="font-display text-[1.35rem] leading-none font-bold tracking-tight text-white">
+        <span className="font-sans text-[1.35rem] leading-none font-bold tracking-tight text-white">
           B<span className="text-gold-400">O</span>B
         </span>
         <span className="flag-stripe absolute inset-x-0 bottom-0 h-1" />
@@ -13,7 +13,7 @@ export function Logo({ className, light = false }: { className?: string; light?:
       <span className="leading-none">
         <span
           className={cn(
-            "block font-display text-[1.15rem] leading-[0.95] font-bold tracking-tight whitespace-nowrap uppercase min-[400px]:text-[1.3rem] sm:text-[1.4rem]",
+            "block font-sans text-[1.15rem] leading-[0.95] font-bold tracking-tight whitespace-nowrap uppercase min-[400px]:text-[1.3rem] sm:text-[1.4rem]",
             light ? "text-white" : "text-forest-950"
           )}
         >
@@ -21,7 +21,7 @@ export function Logo({ className, light = false }: { className?: string; light?:
         </span>
         <span
           className={cn(
-            "mt-1 block font-display text-xs font-semibold tracking-[0.12em] whitespace-nowrap uppercase min-[400px]:tracking-[0.16em] sm:tracking-[0.22em]",
+            "mt-1 block font-sans text-xs font-semibold tracking-[0.12em] whitespace-nowrap uppercase min-[400px]:tracking-[0.16em] sm:tracking-[0.22em]",
             light ? "text-white/60" : "text-forest-950/55"
           )}
         >

@@ -83,7 +83,7 @@ export default function ConstituencyPage() {
           <Reveal className="relative aspect-[4/3] overflow-hidden rounded-md">
             <Image src="/images/leaders-group.jpg" alt="Surulere party leaders and stakeholders" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-950/85 to-transparent p-6 text-white">
-              <p className="font-display text-sm font-bold tracking-[0.16em] text-gold-300 uppercase">Lagos State House of Assembly</p>
+              <p className="font-sans text-sm font-bold tracking-[0.16em] text-gold-300 uppercase">Lagos State House of Assembly</p>
               <p className="font-display text-3xl font-bold uppercase">Surulere Constituency I</p>
             </div>
           </Reveal>
@@ -95,7 +95,7 @@ export default function ConstituencyPage() {
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
               Surulere is where Barakat was born, schooled and first elected. Its markets, schools, sports grounds and creative scene carry a huge share of Lagos life, and its residents deserve an Assembly member who answers when they call.
             </p>
-            <p className="mt-6 font-display text-sm font-bold tracking-[0.16em] text-forest-600 uppercase">What residents raise most</p>
+            <p className="mt-6 font-sans text-sm font-bold tracking-[0.16em] text-forest-600 uppercase">What residents raise most</p>
             <ul className="mt-3 flex flex-wrap gap-2">
               {pillars.map((p) => (
                 <li key={p.slug} className="rounded-[4px] bg-forest-50 px-3 py-2 text-sm font-semibold text-forest-800">

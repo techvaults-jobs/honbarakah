@@ -204,14 +204,14 @@ export function PortalForm({ form, className }: { form: PortalFormKey; className
           <button
             type="button"
             onClick={() => navigator.clipboard?.writeText(ref).then(() => toast.success("Reference copied"))}
-            className="mt-5 inline-flex items-center gap-3 rounded-[4px] border-2 border-dashed border-forest-600/40 bg-white px-5 py-3 font-display text-2xl font-bold tracking-[0.12em] text-forest-800"
+            className="mt-5 inline-flex items-center gap-3 rounded-[4px] border-2 border-dashed border-forest-600/40 bg-white px-5 py-3 font-sans text-2xl font-bold tracking-[0.12em] text-forest-800"
           >
             {ref}
             <Copy className="size-4 text-forest-600" />
           </button>
         )}
         <p className="mt-4 max-w-md text-muted-foreground">{def.success.body}</p>
-        <Button variant="outline" className="mt-8 h-11 rounded-[4px] px-6 font-display text-base font-bold uppercase" onClick={() => setRef(null)}>
+        <Button variant="outline" className="mt-8 h-11 rounded-[4px] px-6 font-sans text-base font-bold uppercase" onClick={() => setRef(null)}>
           {def.success.again}
         </Button>
       </div>
@@ -285,7 +285,7 @@ export function PortalForm({ form, className }: { form: PortalFormKey; className
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="h-14 w-full rounded-[4px] bg-forest-700 font-display text-lg font-bold tracking-wide uppercase hover:bg-forest-600 sm:w-auto sm:px-10"
+          className="h-14 w-full rounded-[4px] bg-forest-700 font-sans text-lg font-bold tracking-wide uppercase hover:bg-forest-600 sm:w-auto sm:px-10"
         >
           {isSubmitting ? <Loader2 className="animate-spin" /> : <Send />}
           {def.submitLabel}

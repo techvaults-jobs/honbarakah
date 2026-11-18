@@ -22,7 +22,7 @@ export function NewsFilter({ items, order }: { items: Item[]; order: string[] })
               aria-pressed={active === t}
               onClick={() => setActive(t)}
               className={cn(
-                "h-11 shrink-0 rounded-[4px] border-2 px-5 font-display text-base font-bold tracking-wide whitespace-nowrap uppercase transition-colors",
+                "h-11 shrink-0 rounded-[4px] border-2 px-5 font-sans text-base font-bold tracking-wide whitespace-nowrap uppercase transition-colors",
                 active === t ? "border-forest-700 bg-forest-700 text-white" : "border-forest-950/10 bg-white text-forest-950 hover:border-forest-600"
               )}
             >

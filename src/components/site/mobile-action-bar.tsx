@@ -53,7 +53,7 @@ export function MobileActionBar() {
         <Link
           href="/get-involved"
           tabIndex={visible ? 0 : -1}
-          className="flex h-12 flex-1 items-center justify-center gap-2 rounded-[4px] bg-gold-400 font-display text-lg font-bold tracking-wide text-forest-950 uppercase active:translate-y-px"
+          className="flex h-12 flex-1 items-center justify-center gap-2 rounded-[4px] bg-gold-400 font-sans text-lg font-bold tracking-wide text-forest-950 uppercase active:translate-y-px"
         >
           Join the Movement
           <SquareCheckBig className="size-5" />

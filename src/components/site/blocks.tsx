@@ -29,7 +29,7 @@ export function PageHero({
       </div>
       <Image src={image} alt="" fill priority sizes="100vw" className="-z-20 object-cover opacity-20 lg:hidden" />
       <div className="container-x">
-        <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-1.5 font-display text-sm font-semibold tracking-[0.14em] text-white/60 uppercase">
+        <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-1.5 font-sans text-sm font-semibold tracking-[0.14em] text-white/60 uppercase">
           <Link href="/" className="-my-2 py-2 hover:text-gold-300">
             Home
           </Link>
@@ -93,7 +93,7 @@ export function CredentialMarquee({ className }: { className?: string }) {
     <div className={cn("relative flex -rotate-[1.2deg] overflow-hidden bg-gold-400 py-4 shadow-xl", className)}>
       <div className="flex shrink-0 animate-marquee items-center gap-8 pr-8 motion-reduce:animate-none">
         {items.map((c, i) => (
-          <span key={i} className="flex items-center gap-8 font-display text-xl font-bold whitespace-nowrap text-forest-950 uppercase sm:text-2xl">
+          <span key={i} className="flex items-center gap-8 font-sans text-xl font-bold whitespace-nowrap text-forest-950 uppercase sm:text-2xl">
             {c}
             <Star className="size-5 fill-forest-700 text-forest-700" aria-hidden />
           </span>
@@ -118,12 +118,12 @@ export function NewsCard({ item, priority = false }: { item: NewsItem; priority?
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
         />
-        <span className="absolute top-0 right-0 rounded-bl-md bg-gold-400 px-3 py-1.5 font-display text-sm font-bold tracking-wider text-forest-950 uppercase">
+        <span className="absolute top-0 right-0 rounded-bl-md bg-gold-400 px-3 py-1.5 font-sans text-sm font-bold tracking-wider text-forest-950 uppercase">
           {item.source ? item.source.name : item.category}
         </span>
       </div>
       <div className="flex flex-1 flex-col p-6">
-        <p className="font-display text-sm font-semibold tracking-[0.14em] text-forest-600 uppercase">
+        <p className="font-sans text-sm font-semibold tracking-[0.14em] text-forest-600 uppercase">
           {item.date ? formatDate(item.date) : "In the press"}
         </p>
         <h3 className="mt-2 text-2xl leading-[1.02] text-forest-950 sm:text-[1.7rem]">
@@ -132,7 +132,7 @@ export function NewsCard({ item, priority = false }: { item: NewsItem; priority?
           </Link>
         </h3>
         <p className="mt-3 line-clamp-3 leading-relaxed text-forest-950/65">{item.excerpt}</p>
-        <span className="mt-auto flex items-center gap-1.5 pt-5 font-display text-base font-bold tracking-wide text-forest-700 uppercase">
+        <span className="mt-auto flex items-center gap-1.5 pt-5 font-sans text-base font-bold tracking-wide text-forest-700 uppercase">
           {external ? `Read on ${item.source!.name}` : "Read the story"}
           {external ? <ArrowUpRight className="size-4" /> : <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />}
         </span>

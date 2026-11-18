@@ -14,8 +14,8 @@ export function EventStatus({ date }: { date: string }) {
     <span
       className={
         upcoming
-          ? "rounded-[3px] bg-apc-red px-2.5 py-1 font-display text-xs font-bold tracking-wider text-white uppercase"
-          : "rounded-[3px] bg-forest-950/5 px-2.5 py-1 font-display text-xs font-bold tracking-wider text-forest-950/60 uppercase"
+          ? "rounded-[3px] bg-apc-red px-2.5 py-1 font-sans text-xs font-bold tracking-wider text-white uppercase"
+          : "rounded-[3px] bg-forest-950/5 px-2.5 py-1 font-sans text-xs font-bold tracking-wider text-forest-950/60 uppercase"
       }
     >
       {upcoming ? "Upcoming" : "Held"}

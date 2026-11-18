@@ -16,7 +16,7 @@ function Panel({ p, index }: { p: PillarData; index: number }) {
       <div className="relative h-48 shrink-0 sm:h-64">
         <Image src={p.image} alt="" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover object-[center_30%]" />
         <div className="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/30 to-transparent" />
-        <span className="absolute top-4 left-4 rounded-[3px] bg-gold-400 px-2.5 py-1 font-display text-sm font-bold tracking-[0.14em] text-forest-950 uppercase sm:top-5 sm:left-5">
+        <span className="absolute top-4 left-4 rounded-[3px] bg-gold-400 px-2.5 py-1 font-sans text-sm font-bold tracking-[0.14em] text-forest-950 uppercase sm:top-5 sm:left-5">
           Priority 0{index + 1}
         </span>
       </div>
@@ -35,7 +35,7 @@ function Panel({ p, index }: { p: PillarData; index: number }) {
         </ul>
         <Link
           href={`/agenda#${p.slug}`}
-          className="mt-auto inline-flex items-center gap-2 self-start pt-7 pb-1 font-display text-lg font-bold tracking-wide text-gold-400 uppercase hover:text-gold-300"
+          className="mt-auto inline-flex items-center gap-2 self-start pt-7 pb-1 font-sans text-lg font-bold tracking-wide text-gold-400 uppercase hover:text-gold-300"
         >
           Read the full plan <ArrowRight className="size-5" />
         </Link>
@@ -80,10 +80,10 @@ export function AgendaExplorer({ pillars }: { pillars: PillarData[] }) {
                   {item.iconNode}
                 </span>
                 <span className="min-w-0 flex-1">
-                  <span className={cn("block font-display text-[0.8rem] font-bold tracking-[0.16em] sm:text-sm", open ? "text-gold-300" : "text-forest-600")}>
+                  <span className={cn("block font-sans text-[0.8rem] font-bold tracking-[0.16em] sm:text-sm", open ? "text-gold-300" : "text-forest-600")}>
                     PRIORITY 0{i + 1}
                   </span>
-                  <span className="block font-display text-xl leading-tight font-semibold sm:text-2xl">{item.title}</span>
+                  <span className="block font-sans text-xl leading-tight font-semibold sm:text-2xl">{item.title}</span>
                 </span>
                 <ArrowRight className={cn("hidden size-5 shrink-0 transition-transform lg:block", open ? "text-gold-400" : "-translate-x-1 opacity-30")} />
                 <ChevronDown className={cn("size-5 shrink-0 transition-transform lg:hidden", open ? "rotate-180 text-gold-400" : "opacity-40")} />

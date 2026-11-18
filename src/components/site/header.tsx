@@ -35,7 +35,7 @@ export function Header() {
           scrolled ? "h-0" : "h-9"
         )}
       >
-        <div className="container-x flex h-9 items-center justify-between gap-4 font-display text-[0.8rem] font-bold tracking-[0.12em] uppercase sm:text-sm">
+        <div className="container-x flex h-9 items-center justify-between gap-4 font-sans text-[0.8rem] font-bold tracking-[0.12em] uppercase sm:text-sm">
           <p className="flex items-center gap-2">
             <CalendarClock className="size-4" />
             <span>
@@ -69,7 +69,7 @@ export function Header() {
               {nav.map((item) => {
                 const active = groupActive(item)
                 const linkClass = cn(
-                  "relative flex items-center gap-1 px-3 py-2 font-display text-[1.05rem] font-bold tracking-wide uppercase transition-colors",
+                  "relative flex items-center gap-1 px-2 py-2 font-sans text-[0.85rem] font-bold tracking-wide whitespace-nowrap uppercase transition-colors 2xl:px-2.5 2xl:text-[0.95rem]",
                   scrolled
                     ? active
                       ? "text-forest-600"
@@ -115,7 +115,7 @@ export function Header() {
                               )}
                             >
                               <span className="min-w-0 flex-1">
-                                <span className="block font-display text-lg leading-tight font-bold text-forest-950 uppercase group-hover/item:text-forest-700">
+                                <span className="block font-sans text-lg leading-tight font-bold text-forest-950 uppercase group-hover/item:text-forest-700">
                                   {c.label}
                                 </span>
                                 {c.note && <span className="mt-0.5 block text-sm text-muted-foreground">{c.note}</span>}
@@ -161,7 +161,7 @@ export function Header() {
                           <Link
                             href="/"
                             className={cn(
-                              "flex items-center rounded-[4px] px-3 py-2 font-display text-[1.7rem] font-bold uppercase transition-colors",
+                              "flex items-center rounded-[4px] px-3 py-2 font-sans text-[1.7rem] font-bold uppercase transition-colors",
                               pathname === "/" ? "bg-white/10 text-gold-400" : "text-white hover:bg-white/5"
                             )}
                           >
@@ -173,7 +173,7 @@ export function Header() {
                       {nav.map((item) =>
                         item.children ? (
                           <li key={item.href} className="pt-3">
-                            <p className="px-3 font-display text-sm font-bold tracking-[0.18em] text-gold-400/80 uppercase">{item.label}</p>
+                            <p className="px-3 font-sans text-sm font-bold tracking-[0.18em] text-gold-400/80 uppercase">{item.label}</p>
                             <ul className="mt-1.5 grid grid-cols-1 gap-0.5 border-l-2 border-white/10 pl-2 min-[400px]:grid-cols-2">
                               {item.children.map((c) => (
                                 <li key={c.href}>
@@ -198,7 +198,7 @@ export function Header() {
                               <Link
                                 href={item.href}
                                 className={cn(
-                                  "flex items-center rounded-[4px] px-3 py-2 font-display text-[1.7rem] font-bold uppercase transition-colors",
+                                  "flex items-center rounded-[4px] px-3 py-2 font-sans text-[1.7rem] font-bold uppercase transition-colors",
                                   isActive(item.href) ? "bg-white/10 text-gold-400" : "text-white hover:bg-white/5"
                                 )}
                               >

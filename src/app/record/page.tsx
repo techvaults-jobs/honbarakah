@@ -86,9 +86,9 @@ export default function RecordPage() {
                   </span>
                   <article className="rounded-md border border-border bg-white p-6 sm:p-8">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="rounded-[3px] bg-forest-50 px-2.5 py-1 font-display text-xs font-bold tracking-wider text-forest-700 uppercase">{o.kind}</span>
-                      <span className="font-display text-sm font-bold tracking-[0.12em] text-muted-foreground uppercase">{o.period}</span>
-                      {o.current && <span className="rounded-[3px] bg-gold-400 px-2.5 py-1 font-display text-xs font-bold tracking-wider text-forest-950 uppercase">Current</span>}
+                      <span className="rounded-[3px] bg-forest-50 px-2.5 py-1 font-sans text-xs font-bold tracking-wider text-forest-700 uppercase">{o.kind}</span>
+                      <span className="font-sans text-sm font-bold tracking-[0.12em] text-muted-foreground uppercase">{o.period}</span>
+                      {o.current && <span className="rounded-[3px] bg-gold-400 px-2.5 py-1 font-sans text-xs font-bold tracking-wider text-forest-950 uppercase">Current</span>}
                     </div>
                     <h3 className="mt-3 text-2xl text-forest-950 sm:text-3xl">{o.title}</h3>
                     <p className="mt-1 font-medium text-forest-600">{o.body}</p>
@@ -101,7 +101,7 @@ export default function RecordPage() {
                       ))}
                     </ul>
                     {count > 0 && (
-                      <Link href="/projects" className="mt-5 inline-flex items-center gap-2 py-1 font-display text-base font-bold tracking-wide text-forest-700 uppercase hover:text-forest-600">
+                      <Link href="/projects" className="mt-5 inline-flex items-center gap-2 py-1 font-sans text-base font-bold tracking-wide text-forest-700 uppercase hover:text-forest-600">
                         {count} projects on record <ArrowRight className="size-4" />
                       </Link>
                     )}

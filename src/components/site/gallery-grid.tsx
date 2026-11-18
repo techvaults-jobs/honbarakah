@@ -43,7 +43,7 @@ export function GalleryGrid({ items, showFilters = true }: { items: GalleryItem[
               aria-selected={filter === f}
               onClick={() => setFilter(f)}
               className={cn(
-                "rounded-[4px] border-2 px-5 py-2 font-display text-base font-bold tracking-wide uppercase transition-colors",
+                "rounded-[4px] border-2 px-5 py-2 font-sans text-base font-bold tracking-wide uppercase transition-colors",
                 filter === f
                   ? "border-forest-700 bg-forest-700 text-white"
                   : "border-border bg-white text-forest-900 hover:border-forest-300"

@@ -151,7 +151,7 @@ export default function AboutPage() {
                   <p className="font-semibold text-forest-950">{e.school}</p>
                   <p className="text-sm text-muted-foreground">{e.place}</p>
                 </div>
-                <span className="w-fit rounded-[3px] bg-forest-50 px-3 py-1.5 font-display text-sm font-bold tracking-wide text-forest-700 uppercase">{e.detail}</span>
+                <span className="w-fit rounded-[3px] bg-forest-50 px-3 py-1.5 font-sans text-sm font-bold tracking-wide text-forest-700 uppercase">{e.detail}</span>
               </li>
             ))}
           </ul>

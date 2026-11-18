@@ -66,7 +66,7 @@ export function VolunteerForm() {
             ? "Thank you for standing with Barakat. You will hear about town halls, ward meetings and election day plans in your area."
             : "Thank you for stepping forward. A coordinator from your ward will reach out to you within a few days."}
         </p>
-        <Button variant="outline" className="mt-8 h-11 rounded-[4px] px-6 font-display text-base font-bold uppercase" onClick={() => setDone(false)}>
+        <Button variant="outline" className="mt-8 h-11 rounded-[4px] px-6 font-sans text-base font-bold uppercase" onClick={() => setDone(false)}>
           Register someone else
         </Button>
       </div>
@@ -92,7 +92,7 @@ export function VolunteerForm() {
                   field.value === k ? "bg-white shadow-md shadow-forest-950/10" : "hover:bg-white/50"
                 )}
               >
-                <span className={cn("block font-display text-lg font-bold uppercase", field.value === k ? "text-forest-700" : "text-forest-950/70")}>
+                <span className={cn("block font-sans text-lg font-bold uppercase", field.value === k ? "text-forest-700" : "text-forest-950/70")}>
                   {k === "Volunteer" ? "Volunteer" : "Supporter"}
                 </span>
                 <span className="block text-xs leading-snug text-muted-foreground sm:text-sm">
@@ -143,7 +143,7 @@ export function VolunteerForm() {
         </Field>
       </div>
       <div className="sm:col-span-2">
-        <Button type="submit" disabled={isSubmitting} className="h-14 w-full rounded-[4px] bg-forest-700 font-display text-lg font-bold tracking-wide uppercase hover:bg-forest-600 sm:w-auto sm:px-10">
+        <Button type="submit" disabled={isSubmitting} className="h-14 w-full rounded-[4px] bg-forest-700 font-sans text-lg font-bold tracking-wide uppercase hover:bg-forest-600 sm:w-auto sm:px-10">
           {isSubmitting && <Loader2 className="animate-spin" />}
           {kind === "Supporter" ? "Add me as a supporter" : "Count me in"}
         </Button>

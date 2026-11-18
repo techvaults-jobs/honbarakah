@@ -26,7 +26,7 @@ function Chips({
           aria-pressed={value === o.value}
           onClick={() => onChange(o.value)}
           className={cn(
-            "inline-flex h-11 shrink-0 items-center gap-2 rounded-[4px] border-2 px-4 font-display text-base font-bold tracking-wide whitespace-nowrap uppercase transition-colors",
+            "inline-flex h-11 shrink-0 items-center gap-2 rounded-[4px] border-2 px-4 font-sans text-base font-bold tracking-wide whitespace-nowrap uppercase transition-colors",
             value === o.value ? "border-forest-700 bg-forest-700 text-white" : "border-forest-950/10 bg-white text-forest-950 hover:border-forest-600"
           )}
         >
@@ -61,7 +61,7 @@ export function ProjectBrowser({
   return (
     <div>
       <div className="space-y-4 rounded-md border border-border bg-white p-4 sm:p-6">
-        <p className="flex items-center gap-2 font-display text-sm font-bold tracking-[0.16em] text-forest-600 uppercase">
+        <p className="flex items-center gap-2 font-sans text-sm font-bold tracking-[0.16em] text-forest-600 uppercase">
           <SlidersHorizontal className="size-4" /> Filter the record
         </p>
         <Chips

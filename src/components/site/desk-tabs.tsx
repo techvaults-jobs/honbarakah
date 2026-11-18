@@ -40,7 +40,7 @@ export function DeskTabs({ tabs = constituencyTabs }: { tabs?: Tab[] }) {
                 <t.icon className="size-5" />
               </span>
               <span className="min-w-0">
-                <span className="block font-display text-lg leading-tight font-bold uppercase">{t.label}</span>
+                <span className="block font-sans text-lg leading-tight font-bold uppercase">{t.label}</span>
                 <span className={cn("block text-sm leading-snug", on ? "text-white/70" : "text-muted-foreground")}>{t.hint}</span>
               </span>
             </button>

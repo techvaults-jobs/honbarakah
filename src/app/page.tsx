@@ -31,7 +31,15 @@ export default function HomePage() {
       {/* ───────── Hero ───────── */}
       <section className="relative isolate overflow-hidden bg-forest-700 text-white">
         <div className="bg-shards absolute inset-0 -z-10" />
-        <div className="absolute inset-x-0 top-0 -z-10 h-[64svh] md:inset-x-auto md:inset-y-0 md:right-0 md:h-auto md:w-[42%] lg:w-[44%]">
+        <Image
+          src="/images/apc-logo.jpeg"
+          alt=""
+          width={400}
+          height={400}
+          aria-hidden
+          className="pointer-events-none absolute -top-[4%] -left-[12%] -z-10 hidden w-[min(40rem,58vw)] opacity-20 mask-[linear-gradient(to_bottom,black_20%,transparent_72%)] md:block"
+        />
+        <div className="absolute inset-x-0 top-0 -z-10 h-[64svh] md:inset-x-auto md:inset-y-0 md:right-0 md:h-auto md:w-[42%] md:mask-[linear-gradient(to_right,transparent_0%,black_24%)] lg:w-[44%]">
           <Image
             src="/images/portrait-green.jpg"
             alt="Hon. (Barr.) Barakat Odunuga-Bakare"
@@ -40,18 +48,30 @@ export default function HomePage() {
             sizes="(min-width: 768px) 44vw, 100vw"
             className="object-cover object-[center_15%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-forest-700 via-forest-700/20 to-transparent md:bg-gradient-to-r md:from-forest-700 md:via-transparent md:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-forest-700 via-forest-700/20 to-transparent" />
         </div>
 
         <div className="container-x relative flex min-h-[100svh] flex-col justify-end pt-[52svh] pb-14 md:min-h-[56rem] md:justify-center md:pt-44 md:pb-40 lg:min-h-[100svh] lg:pb-36">
           <div className="max-w-3xl md:max-w-[58%] lg:max-w-[52%]">
             <Reveal>
-              <div className="flex flex-wrap items-center gap-3">
-                <span className="rounded-[3px] bg-apc-red px-2.5 py-1 font-display text-sm font-bold tracking-[0.14em] text-white">APC</span>
-                <span className="font-display text-base font-bold tracking-[0.16em] text-gold-300 uppercase sm:text-lg">
-                  Lagos State House of Assembly &middot; {site.constituency}
-                </span>
+              <div className="flex flex-wrap items-center gap-x-5 gap-y-4">
+                <div className="inline-flex items-center gap-4 rounded-full bg-white/10 py-1.5 pr-6 pl-1.5 ring-1 ring-white/15 backdrop-blur-sm">
+                  <Image
+                    src="/images/apc-logo.jpeg"
+                    alt="All Progressives Congress (APC) logo"
+                    width={400}
+                    height={400}
+                    className="size-16 shrink-0 rounded-full object-cover ring-[3px] ring-gold-400 shadow-lg shadow-black/40"
+                  />
+                  <span className="leading-tight">
+                    <span className="block font-sans text-xs font-bold tracking-[0.14em] text-gold-300 uppercase">Official candidate of the</span>
+                    <span className="block font-sans text-lg font-bold text-white sm:text-xl">All Progressives Congress</span>
+                  </span>
+                </div>
               </div>
+              <p className="mt-6 font-sans text-sm font-bold tracking-[0.16em] text-gold-300 uppercase sm:text-base">
+                Lagos State House of Assembly &middot; {site.constituency}
+              </p>
             </Reveal>
             <Reveal delay={0.08}>
               <h1 className="mt-6 font-display leading-[0.9] font-bold">
@@ -86,7 +106,7 @@ export default function HomePage() {
               ].map(([v, l], i) => (
                 <div key={l} className={cn("border-forest-950/10 px-5 py-5 sm:px-6", i % 2 === 1 && "border-l", i > 1 && "border-t sm:border-t-0", i === 2 && "sm:border-l")}>
                   <div className="font-display text-4xl leading-none font-bold text-forest-700">{v}</div>
-                  <div className="mt-1 font-display text-sm font-bold tracking-[0.1em] text-forest-950/60 uppercase">{l}</div>
+                  <div className="mt-1 font-sans text-sm font-bold tracking-[0.1em] text-forest-950/60 uppercase">{l}</div>
                 </div>
               ))}
             </Reveal>
@@ -106,7 +126,7 @@ export default function HomePage() {
               <Image src="/images/portrait-smile.jpg" alt="Barakat Odunuga-Bakare smiling in a black dress and pearls" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover object-top" />
               <div className="absolute bottom-0 left-0 bg-forest-700 px-6 py-5 text-white">
                 <p className="font-display text-5xl leading-none font-bold">1986</p>
-                <p className="font-display text-sm font-bold tracking-[0.14em] text-gold-300 uppercase">Born in Surulere</p>
+                <p className="font-sans text-sm font-bold tracking-[0.14em] text-gold-300 uppercase">Born in Surulere</p>
               </div>
             </Reveal>
             <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-16">
@@ -127,7 +147,7 @@ export default function HomePage() {
               <Reveal delay={0.15} className="mt-8 flex flex-wrap items-center justify-between gap-6 border-t border-forest-950/10 pt-8">
                 <div>
                   <p className="font-signature text-[2.4rem] leading-none text-forest-700 sm:text-5xl">Barakat Odunuga-Bakare</p>
-                  <p className="mt-2 font-display text-sm font-bold tracking-[0.14em] text-forest-950/50 uppercase">Hon. (Barr.) Barakat Odunuga-Bakare</p>
+                  <p className="mt-2 font-sans text-sm font-bold tracking-[0.14em] text-forest-950/50 uppercase">Hon. (Barr.) Barakat Odunuga-Bakare</p>
                 </div>
                 <CtaLink href="/about" variant="green" size="md" icon="arrow">
                   Her story
@@ -172,7 +192,7 @@ export default function HomePage() {
                       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-forest-950 via-forest-900/70 to-forest-800/30" />
                     </>
                   )}
-                  <span className={cn("font-display text-sm font-bold tracking-[0.16em]", i === 0 ? "text-gold-300" : "text-forest-600")}>0{i + 1}</span>
+                  <span className={cn("font-sans text-sm font-bold tracking-[0.16em]", i === 0 ? "text-gold-300" : "text-forest-600")}>0{i + 1}</span>
                   <span
                     className={cn(
                       "mt-4 grid size-14 place-items-center rounded-[4px] transition-transform group-hover:-rotate-6",
@@ -183,7 +203,7 @@ export default function HomePage() {
                   </span>
                   <h3 className={cn("mt-6 leading-tight", i === 0 ? "text-4xl lg:mt-auto lg:text-5xl" : "text-2xl")}>{h.title}</h3>
                   <p className={cn("mt-2 leading-relaxed", i === 0 ? "max-w-sm text-lg text-white/75" : "text-forest-950/65")}>{h.body}</p>
-                  <span className={cn("mt-6 flex items-center gap-2 font-display text-base font-bold tracking-wide uppercase", i === 0 ? "text-gold-400" : "text-forest-700")}>
+                  <span className={cn("mt-6 flex items-center gap-2 font-sans text-base font-bold tracking-wide uppercase", i === 0 ? "text-gold-400" : "text-forest-700")}>
                     {h.cta} <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                   </span>
                 </Link>
@@ -202,7 +222,7 @@ export default function HomePage() {
             &ldquo;<span className="text-gold-400">Leadership</span> is not defined by titles alone. It is defined by{" "}
             <span className="text-gold-400">service, commitment and visible impact</span> on people&apos;s lives.&rdquo;
           </p>
-          <p className="mt-8 font-display text-lg font-bold tracking-[0.2em] text-white/60 uppercase">The B.O.B 2027 creed</p>
+          <p className="mt-8 font-sans text-lg font-bold tracking-[0.2em] text-white/60 uppercase">The B.O.B 2027 creed</p>
         </Reveal>
       </section>
 
@@ -311,7 +331,7 @@ export default function HomePage() {
             ))}
           </ol>
           <Reveal className="mt-12 text-center">
-            <Link href="/about#journey" className="group inline-flex items-center gap-2 py-2 font-display text-lg font-bold tracking-wide text-forest-700 uppercase hover:text-forest-600">
+            <Link href="/about#journey" className="group inline-flex items-center gap-2 py-2 font-sans text-lg font-bold tracking-wide text-forest-700 uppercase hover:text-forest-600">
               See the full timeline
               <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
             </Link>
@@ -324,7 +344,7 @@ export default function HomePage() {
         <div className="absolute inset-0 -z-10 bg-[repeating-linear-gradient(-45deg,transparent_0_18px,rgba(0,0,0,0.035)_18px_36px)]" />
         <div className="container-x grid items-center gap-12 lg:grid-cols-[1fr_1.1fr]">
           <Reveal>
-            <span className="inline-flex rounded-[3px] border-2 border-forest-950 px-2.5 py-1 font-display text-sm font-bold tracking-[0.14em] uppercase">
+            <span className="inline-flex rounded-[3px] border-2 border-forest-950 px-2.5 py-1 font-sans text-sm font-bold tracking-[0.14em] uppercase">
               Àjùmọ̀ṣe, Àjùmọ̀jẹ
             </span>
             <h2 className="mt-6 text-4xl sm:text-5xl lg:text-6xl">
@@ -343,7 +363,7 @@ export default function HomePage() {
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mb-4 font-display text-lg font-bold tracking-[0.14em] uppercase">Countdown to election day</p>
+            <p className="mb-4 font-sans text-lg font-bold tracking-[0.14em] uppercase">Countdown to election day</p>
             <Countdown date={site.election.date} />
           </Reveal>
         </div>
@@ -375,12 +395,12 @@ export default function HomePage() {
                   >
                     <div className={cn("flex w-24 flex-col items-center rounded-[4px] py-3 text-center", upcoming ? "bg-gold-400 text-forest-950" : "bg-forest-50 text-forest-800")}>
                       <span className="font-display text-5xl leading-none font-bold">{d.day}</span>
-                      <span className="font-display text-sm font-bold tracking-[0.14em] uppercase">
+                      <span className="font-sans text-sm font-bold tracking-[0.14em] uppercase">
                         {d.month} {d.year}
                       </span>
                     </div>
                     <div>
-                      <span className={cn("font-display text-sm font-bold tracking-[0.16em] uppercase", upcoming ? "text-gold-300" : "text-forest-600")}>
+                      <span className={cn("font-sans text-sm font-bold tracking-[0.16em] uppercase", upcoming ? "text-gold-300" : "text-forest-600")}>
                         {upcoming ? "Upcoming" : "Past"} &middot; {e.tag}
                       </span>
                       <h3 className="mt-1 text-3xl">{e.title}</h3>

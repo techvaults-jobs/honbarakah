@@ -43,7 +43,7 @@ export function ContactForm() {
         <p className="mt-3 max-w-md text-muted-foreground">
           Thank you for writing. Someone from the team will read your message and get back to you.
         </p>
-        <Button variant="outline" className="mt-8 h-11 rounded-[4px] px-6 font-display text-base font-bold uppercase" onClick={() => setDone(false)}>
+        <Button variant="outline" className="mt-8 h-11 rounded-[4px] px-6 font-sans text-base font-bold uppercase" onClick={() => setDone(false)}>
           Send another message
         </Button>
       </div>
@@ -87,7 +87,7 @@ export function ContactForm() {
         </Field>
       </div>
       <div className="sm:col-span-2">
-        <Button type="submit" disabled={isSubmitting} className="h-14 rounded-[4px] bg-forest-700 px-10 font-display text-lg font-bold tracking-wide uppercase hover:bg-forest-600">
+        <Button type="submit" disabled={isSubmitting} className="h-14 rounded-[4px] bg-forest-700 px-10 font-sans text-lg font-bold tracking-wide uppercase hover:bg-forest-600">
           {isSubmitting ? <Loader2 className="animate-spin" /> : <Send />}
           Send message
         </Button>

@@ -34,7 +34,7 @@ export function Countdown({ date }: { date: string }) {
           <div className="font-display text-4xl leading-none font-bold tabular-nums sm:text-6xl">
             {left ? String(left[unit]).padStart(2, "0") : "--"}
           </div>
-          <div className="mt-2 font-display text-xs font-bold tracking-[0.2em] text-forest-600 uppercase sm:text-sm">
+          <div className="mt-2 font-sans text-xs font-bold tracking-[0.2em] text-forest-600 uppercase sm:text-sm">
             {unit}
           </div>
         </div>

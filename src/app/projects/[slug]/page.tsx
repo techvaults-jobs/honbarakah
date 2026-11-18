@@ -58,7 +58,7 @@ async function ProjectDetail({ params }: { params: PageProps<"/projects/[slug]">
               <span className="grid size-14 place-items-center rounded-[4px] bg-gold-400 text-forest-950">
                 <p.icon className="size-7" />
               </span>
-              <span className={cn("rounded-[3px] px-3 py-1 font-display text-sm font-bold tracking-wider uppercase", statusStyle[p.status])}>{p.status}</span>
+              <span className={cn("rounded-[3px] px-3 py-1 font-sans text-sm font-bold tracking-wider uppercase", statusStyle[p.status])}>{p.status}</span>
             </div>
             <h1 className="mt-6 max-w-3xl text-4xl leading-[1.05] text-balance sm:text-6xl">{p.title}</h1>
             <p className="mt-5 max-w-2xl text-xl leading-relaxed text-white/75">{p.summary}</p>

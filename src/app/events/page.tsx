@@ -41,13 +41,13 @@ export default function EventsPage() {
                 <article className="group relative grid overflow-hidden rounded-md border border-border bg-white transition-all hover:border-forest-600 hover:shadow-xl hover:shadow-forest-900/5 sm:grid-cols-[9rem_1fr_auto]">
                   <div className="flex items-center gap-3 bg-forest-700 px-6 py-4 text-white sm:flex-col sm:justify-center sm:gap-0 sm:py-6">
                     <span className="font-display text-5xl leading-none font-bold text-gold-400 sm:text-6xl">{d.day}</span>
-                    <span className="font-display text-lg font-bold tracking-wide uppercase">
+                    <span className="font-sans text-lg font-bold tracking-wide uppercase">
                       {d.month} {d.year}
                     </span>
                   </div>
                   <div className="p-6">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="rounded-[3px] bg-gold-100 px-2.5 py-1 font-display text-xs font-bold tracking-wider text-forest-800 uppercase">{e.tag}</span>
+                      <span className="rounded-[3px] bg-gold-100 px-2.5 py-1 font-sans text-xs font-bold tracking-wider text-forest-800 uppercase">{e.tag}</span>
                       <EventStatus date={e.date} />
                     </div>
                     <h2 className="mt-3 text-2xl leading-tight text-forest-950 normal-case sm:text-3xl">

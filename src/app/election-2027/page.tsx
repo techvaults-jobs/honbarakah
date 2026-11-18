@@ -48,7 +48,7 @@ export default function ElectionPage() {
         <div className="absolute inset-0 -z-10 bg-[repeating-linear-gradient(-45deg,transparent_0_18px,rgba(0,0,0,0.035)_18px_36px)]" />
         <div className="container-x grid items-center gap-8 lg:grid-cols-[1fr_1.2fr]">
           <div>
-            <p className="font-display text-sm font-bold tracking-[0.16em] uppercase">{site.election.label}</p>
+            <p className="font-sans text-sm font-bold tracking-[0.16em] uppercase">{site.election.label}</p>
             <h2 className="mt-2 text-4xl sm:text-5xl">The countdown is on.</h2>
           </div>
           <Countdown date={site.election.date} />
@@ -69,7 +69,7 @@ export default function ElectionPage() {
         <ol className="rail-sm mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {pipeline.map((s, i) => (
             <Reveal as="li" key={s.title} delay={i * 0.06} className="relative rounded-md border border-border bg-white p-6">
-              <span className="font-display text-sm font-bold tracking-[0.16em] text-forest-600">STEP 0{i + 1}</span>
+              <span className="font-sans text-sm font-bold tracking-[0.16em] text-forest-600">STEP 0{i + 1}</span>
               <span className="mt-4 grid size-12 place-items-center rounded-[4px] bg-forest-700 text-gold-300">
                 <s.icon className="size-6" />
               </span>

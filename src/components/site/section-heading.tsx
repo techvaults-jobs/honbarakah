@@ -5,7 +5,7 @@ export function Eyebrow({ children, light = false, className }: { children: Reac
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-2 rounded-[3px] border-2 px-2.5 py-1 font-display text-sm font-bold tracking-[0.14em] uppercase",
+        "inline-flex items-center gap-2 rounded-[3px] border-2 px-2.5 py-1 font-sans text-sm font-bold tracking-[0.14em] uppercase",
         light ? "border-gold-400/70 text-gold-300" : "border-forest-950 text-forest-950",
         className
       )}
