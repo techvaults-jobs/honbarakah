@@ -44,7 +44,7 @@ export default function TeamPage() {
           </div>
           <div className="bg-shards flex flex-col justify-center p-7 sm:p-12">
             <span className="w-fit rounded-[3px] bg-gold-400 px-3 py-1 font-sans text-sm font-bold tracking-wider text-forest-950 uppercase">The principal</span>
-            <h2 className="mt-5 text-4xl sm:text-5xl">{site.fullTitle}</h2>
+            <h2 className="mt-5 text-3xl sm:text-4xl">{site.fullTitle}</h2>
             <p className="mt-2 font-sans text-xl font-semibold text-gold-300">{site.role}, {site.constituency}</p>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/75">
               Lawyer, two-term councillor, former leader of the Surulere Legislative Arm and former Special Adviser on Housing to the Governor of Lagos State.

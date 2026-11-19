@@ -55,7 +55,7 @@ export default function PrivacyPage() {
       <header className="bg-forest-950 pt-36 pb-14 text-white sm:pt-44">
         <div className="container-x max-w-3xl">
           <p className="font-sans text-sm font-bold tracking-[0.16em] text-gold-400 uppercase">Data protection</p>
-          <h1 className="mt-4 text-5xl sm:text-6xl">Privacy policy</h1>
+          <h1 className="mt-4 text-4xl sm:text-5xl">Privacy policy</h1>
           <p className="mt-5 text-lg text-white/70">Plain language on what happens to the details you share with us.</p>
         </div>
       </header>
@@ -63,7 +63,7 @@ export default function PrivacyPage() {
         <div className="space-y-10">
           {sections.map((s) => (
             <section key={s.title}>
-              <h2 className="text-3xl text-forest-950">{s.title}</h2>
+              <h2 className="text-2xl text-forest-950">{s.title}</h2>
               <div className="mt-3 space-y-4 text-lg leading-relaxed text-forest-950/80">
                 {s.body.map((p) => (
                   <p key={p}>{p}</p>

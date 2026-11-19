@@ -62,9 +62,9 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={0.08}>
               <h1 className="mt-6 font-display leading-[0.9] font-bold">
-                <span className="block text-[3.4rem] sm:text-[5.6rem] xl:text-[6.8rem]">Barakat</span>
-                <span className="block text-[2.2rem] text-white/95 sm:text-[3.6rem] xl:text-[4.4rem]">Odunuga-Bakare</span>
-                <span className="mt-2 block text-[2.2rem] text-gold-400 sm:text-[3.6rem] xl:text-[4.4rem]">For Surulere.</span>
+                <span className="block text-[2.8rem] sm:text-[4.4rem] xl:text-[5.2rem]">Barakat</span>
+                <span className="block text-[1.9rem] text-white/95 sm:text-[2.9rem] xl:text-[3.4rem]">Odunuga-Bakare</span>
+                <span className="mt-2 block text-[1.9rem] text-gold-400 sm:text-[2.9rem] xl:text-[3.4rem]">For Surulere.</span>
               </h1>
             </Reveal>
             <Reveal delay={0.16}>
@@ -119,7 +119,7 @@ export default function HomePage() {
             <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-16">
               <Reveal>
                 <Eyebrow>Meet Barakat</Eyebrow>
-                <h2 className="mt-6 text-4xl text-forest-950 sm:text-5xl">
+                <h2 className="mt-6 text-3xl text-forest-950 sm:text-4xl">
                   Authentic leadership. <Hi>A voice for the people.</Hi>
                 </h2>
               </Reveal>
@@ -205,7 +205,7 @@ export default function HomePage() {
         <div className="bg-shards absolute inset-0 -z-10" />
         <Quote className="absolute top-10 left-1/2 -z-10 size-48 -translate-x-1/2 text-white/5" />
         <Reveal className="container-x text-center">
-          <p className="mx-auto max-w-4xl font-display text-4xl leading-[1.05] font-semibold uppercase sm:text-5xl lg:text-6xl">
+          <p className="mx-auto max-w-4xl font-display text-3xl leading-[1.1] font-semibold uppercase sm:text-4xl lg:text-5xl">
             &ldquo;<span className="text-gold-400">Leadership</span> is not defined by titles alone. It is defined by{" "}
             <span className="text-gold-400">service, commitment and visible impact</span> on people&apos;s lives.&rdquo;
           </p>
@@ -343,7 +343,7 @@ export default function HomePage() {
             <span className="inline-flex rounded-[3px] border-2 border-gold-400/70 px-2.5 py-1 font-sans text-xs font-bold tracking-[0.14em] text-gold-300 uppercase">
               Àjùmọ̀ṣe, Àjùmọ̀jẹ
             </span>
-            <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl">
+            <h2 className="mt-5 text-2xl sm:text-3xl lg:text-4xl">
               What we build together, <span className="text-gold-400">we share together.</span>
             </h2>
             <p className="mt-4 max-w-lg text-base text-white/75 sm:text-lg">

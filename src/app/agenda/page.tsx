@@ -54,7 +54,7 @@ export default function AgendaPage() {
                   </span>
                   <span className="font-display text-6xl font-bold text-forest-100">0{i + 1}</span>
                 </div>
-                <h2 className="mt-8 text-4xl text-forest-950 sm:text-5xl">{p.title}</h2>
+                <h2 className="mt-8 text-3xl text-forest-950 sm:text-4xl">{p.title}</h2>
                 <p className="mt-5 text-xl leading-relaxed text-forest-800">{p.summary}</p>
               </Reveal>
               <Reveal delay={0.1}>
@@ -82,7 +82,7 @@ export default function AgendaPage() {
       <section className="bg-white py-20">
         <Reveal className="container-x flex flex-col items-start justify-between gap-8 rounded-md border border-border bg-gold-100/50 p-8 sm:p-12 lg:flex-row lg:items-center">
           <div className="max-w-2xl">
-            <h2 className="text-3xl text-forest-950 sm:text-6xl">Something missing from this list?</h2>
+            <h2 className="text-2xl text-forest-950 sm:text-5xl">Something missing from this list?</h2>
             <p className="mt-3 text-lg text-muted-foreground">
               This agenda belongs to Surulere. Tell the campaign what your street, market or school needs, and it will be heard.
             </p>

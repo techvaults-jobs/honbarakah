@@ -137,7 +137,7 @@ export default function AboutPage() {
         <div className="grid gap-14 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
           <div>
             <Eyebrow>Education</Eyebrow>
-            <h2 className="mt-4 text-4xl text-forest-950 sm:text-5xl">
+            <h2 className="mt-4 text-3xl text-forest-950 sm:text-4xl">
               Trained in two legal traditions.
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">

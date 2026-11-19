@@ -147,7 +147,7 @@ export default function RecordPage() {
             <span className="grid size-14 place-items-center rounded-md bg-forest-700 text-gold-300">
               <Gavel className="size-7" />
             </span>
-            <h2 className="mt-6 text-4xl text-forest-950 sm:text-5xl">A lawmaker before the title.</h2>
+            <h2 className="mt-6 text-3xl text-forest-950 sm:text-4xl">A lawmaker before the title.</h2>
             <p className="mt-5 text-lg text-muted-foreground">
               Barakat already knows how legislation is written, debated and passed. She has done it, and she has led the chamber that did it.
             </p>
@@ -175,7 +175,7 @@ export default function RecordPage() {
               <Eyebrow light className="mt-6">
                 Special Adviser on Housing, 2023 to 2026
               </Eyebrow>
-              <h2 className="mt-4 text-5xl text-balance sm:text-6xl">
+              <h2 className="mt-4 text-4xl text-balance sm:text-5xl">
                 Cleaning up Lagos real estate.
               </h2>
               <p className="mt-5 text-lg text-white/70">

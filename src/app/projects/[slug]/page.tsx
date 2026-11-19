@@ -60,7 +60,7 @@ async function ProjectDetail({ params }: { params: PageProps<"/projects/[slug]">
               </span>
               <span className={cn("rounded-[3px] px-3 py-1 font-sans text-sm font-bold tracking-wider uppercase", statusStyle[p.status])}>{p.status}</span>
             </div>
-            <h1 className="mt-6 max-w-3xl text-4xl leading-[1.05] text-balance sm:text-6xl">{p.title}</h1>
+            <h1 className="mt-6 max-w-3xl text-3xl leading-[1.05] text-balance sm:text-5xl">{p.title}</h1>
             <p className="mt-5 max-w-2xl text-xl leading-relaxed text-white/75">{p.summary}</p>
           </div>
           <div className="flag-stripe absolute inset-x-0 bottom-0 h-1.5" />
@@ -121,7 +121,7 @@ async function ProjectDetail({ params }: { params: PageProps<"/projects/[slug]">
       {related.length > 0 && (
         <section className="border-t border-border bg-white py-16 sm:py-20">
           <div className="container-x">
-            <h2 className="text-3xl text-forest-950 sm:text-4xl">Related projects</h2>
+            <h2 className="text-2xl text-forest-950 sm:text-3xl">Related projects</h2>
             <div className="rail-sm mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((r) => (
                 <ProjectCard key={r.slug} project={r} />

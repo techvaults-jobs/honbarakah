@@ -42,7 +42,7 @@ export function PageHero({
             <ApcSeal className="size-12" />
             <Eyebrow light>{eyebrow}</Eyebrow>
           </div>
-          <h1 className="mt-6 text-5xl text-balance sm:text-6xl lg:text-7xl">{title}</h1>
+          <h1 className="mt-6 text-4xl text-balance sm:text-5xl lg:text-6xl">{title}</h1>
           {intro && <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80 sm:text-xl">{intro}</p>}
         </Reveal>
       </div>
@@ -68,7 +68,7 @@ export function CtaBand({
       <div className="container-x grid items-end gap-0 lg:grid-cols-[1.4fr_1fr]">
         <Reveal className="py-20 sm:py-24">
           <Eyebrow light>Together, we can do more</Eyebrow>
-          <h2 className="mt-6 text-5xl text-balance sm:text-6xl lg:text-7xl">{title}</h2>
+          <h2 className="mt-6 text-4xl text-balance sm:text-5xl lg:text-6xl">{title}</h2>
           <p className="mt-6 max-w-xl text-lg text-white/80 sm:text-xl">{body}</p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <CtaLink href="/get-involved">Volunteer</CtaLink>

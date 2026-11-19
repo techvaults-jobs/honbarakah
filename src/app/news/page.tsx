@@ -41,7 +41,7 @@ export default function NewsPage() {
               {featured.date && (
                 <p className="mt-5 text-sm font-semibold tracking-[0.15em] text-muted-foreground uppercase">{formatDate(featured.date)}</p>
               )}
-              <h2 className="mt-3 text-3xl leading-tight text-forest-950 group-hover:text-forest-700 sm:text-6xl">{featured.title}</h2>
+              <h2 className="mt-3 text-2xl leading-tight text-forest-950 group-hover:text-forest-700 sm:text-5xl">{featured.title}</h2>
               <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{featured.excerpt}</p>
               <span className="mt-8 flex items-center gap-1.5 font-bold text-forest-700">
                 Read the story <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />

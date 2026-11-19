@@ -50,7 +50,7 @@ export default function ElectionPage() {
         <div className="container-x grid items-center gap-8 lg:grid-cols-[1fr_1.2fr]">
           <div>
             <p className="font-sans text-xs font-bold tracking-[0.16em] text-gold-300 uppercase sm:text-sm">{site.election.label}</p>
-            <h2 className="mt-2 text-3xl sm:text-4xl">The countdown is on.</h2>
+            <h2 className="mt-2 text-2xl sm:text-3xl">The countdown is on.</h2>
           </div>
           <Countdown date={site.election.date} />
         </div>
@@ -86,7 +86,7 @@ export default function ElectionPage() {
         <div className="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <div>
             <Eyebrow>Agent registration</Eyebrow>
-            <h2 className="mt-4 text-4xl text-forest-950 sm:text-5xl">
+            <h2 className="mt-4 text-3xl text-forest-950 sm:text-4xl">
               Stand guard <span className="text-forest-600">at your polling unit.</span>
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
@@ -113,7 +113,7 @@ export default function ElectionPage() {
         <div className="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <div>
             <Eyebrow light>For verified agents</Eyebrow>
-            <h2 className="mt-4 text-4xl sm:text-5xl">
+            <h2 className="mt-4 text-3xl sm:text-4xl">
               Field and <span className="text-gold-400">incident reporting.</span>
             </h2>
             <p className="mt-5 text-lg text-white/70">

@@ -7,7 +7,7 @@ export default function NotFound() {
       <div className="bg-weave absolute inset-0 -z-10" />
       <div className="container-x text-center">
         <p className="font-display text-[8rem] leading-none font-bold text-gold-300/90 sm:text-[12rem]">404</p>
-        <h1 className="mt-4 text-3xl sm:text-5xl">This street is not on our map.</h1>
+        <h1 className="mt-4 text-2xl sm:text-4xl">This street is not on our map.</h1>
         <p className="mx-auto mt-4 max-w-md text-lg text-white/65">
           The page you are looking for has moved or never existed. Let us take you back to the campaign.
         </p>

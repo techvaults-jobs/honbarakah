@@ -89,7 +89,7 @@ export default function ConstituencyPage() {
           </Reveal>
           <div>
             <Eyebrow>Your constituency</Eyebrow>
-            <h2 className="mt-4 text-4xl text-forest-950 sm:text-5xl">
+            <h2 className="mt-4 text-3xl text-forest-950 sm:text-4xl">
               Home of the stadium, <span className="text-forest-600">the hustle and the heart of Lagos.</span>
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">

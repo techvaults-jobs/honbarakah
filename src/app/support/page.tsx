@@ -68,7 +68,7 @@ export default function SupportPage() {
         <div className="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <div>
             <Eyebrow>Our promise to you</Eyebrow>
-            <h2 className="mt-4 text-4xl text-forest-950 sm:text-5xl">
+            <h2 className="mt-4 text-3xl text-forest-950 sm:text-4xl">
               Transparent, <span className="text-forest-600">accountable, on record.</span>
             </h2>
             <ul className="mt-8 space-y-4">

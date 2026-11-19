@@ -87,7 +87,7 @@ export default function ProjectsPage() {
           ].map((c, i) => (
             <Reveal key={c.title} delay={i * 0.08} className="flex flex-col rounded-md border border-white/10 bg-white/[0.04] p-7 sm:p-10">
               <c.icon className="size-10 text-gold-400" />
-              <h2 className="mt-5 text-3xl sm:text-4xl">{c.title}</h2>
+              <h2 className="mt-5 text-2xl sm:text-3xl">{c.title}</h2>
               <p className="mt-3 max-w-md text-lg text-white/70">{c.body}</p>
               <CtaLink href={c.cta.href} size="md" icon="arrow" className="mt-8 self-start">
                 {c.cta.label}

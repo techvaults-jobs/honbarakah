@@ -50,7 +50,7 @@ export default function EventsPage() {
                       <span className="rounded-[3px] bg-gold-100 px-2.5 py-1 font-sans text-xs font-bold tracking-wider text-forest-800 uppercase">{e.tag}</span>
                       <EventStatus date={e.date} />
                     </div>
-                    <h2 className="mt-3 text-2xl leading-tight text-forest-950 normal-case sm:text-3xl">
+                    <h2 className="mt-3 text-2xl leading-tight text-forest-950 normal-case sm:text-2xl">
                       {e.href ? (
                         <Link href={e.href} className="after:absolute after:inset-0 group-hover:text-forest-700">
                           {e.title}
@@ -89,7 +89,7 @@ export default function EventsPage() {
           <div className="flex gap-5">
             <Mic className="size-12 shrink-0 text-gold-400" />
             <div>
-              <h2 className="text-4xl sm:text-5xl">Invite Barakat to your event</h2>
+              <h2 className="text-3xl sm:text-4xl">Invite Barakat to your event</h2>
               <p className="mt-3 max-w-xl text-lg text-white/75">
                 Community meetings, association gatherings, school programmes and faith events. Choose &ldquo;Invite Barakat to an event&rdquo; in the contact form.
               </p>

@@ -26,7 +26,7 @@ export function Footer() {
       <div className="container-x relative">
         <div className="grid gap-10 border-b border-white/10 py-14 lg:grid-cols-[1.2fr_1fr] lg:items-center">
           <div>
-            <p className="font-display text-4xl leading-[0.95] font-bold text-balance uppercase sm:text-5xl">
+            <p className="font-display text-3xl leading-[1] font-bold text-balance uppercase sm:text-4xl">
               Get campaign news before anyone else.
             </p>
             <p className="mt-3 max-w-lg text-white/60">

@@ -58,7 +58,7 @@ export default function GetInvolvedPage() {
         <div className="container-x grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div>
             <Eyebrow>Volunteer or supporter</Eyebrow>
-            <h2 className="mt-4 text-4xl text-forest-950 sm:text-5xl">
+            <h2 className="mt-4 text-3xl text-forest-950 sm:text-4xl">
               Put your name down. <span className="text-forest-600">We will do the rest.</span>
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
